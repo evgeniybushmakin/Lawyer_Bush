@@ -1,0 +1,23 @@
+.app-section {
+  margin-bottom: 14rem;
+
+  @include --tablet {
+    margin-bottom: 8rem;
+  }
+
+  @include --mobile {
+    margin-bottom: 6.4rem;
+  }
+
+  &__title {
+    margin-bottom: 4rem;
+
+    @include --tablet {
+      margin-bottom: 2.4rem;
+    }
+
+    @include --mobile {
+      margin-bottom: 1.6rem;
+    }
+  }
+}

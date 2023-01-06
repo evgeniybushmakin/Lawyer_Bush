@@ -1,0 +1,12 @@
+<svg width="199" height="200" viewBox="0 0 199 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M196 85C196 95.2173 171.376 103.5 141 103.5C110.624 103.5 86 95.2173 86 85" stroke="currentColor" stroke-width="6" stroke-linejoin="round"/>
+  <path d="M196 113C196 123.217 171.376 131.5 141 131.5C110.624 131.5 86 123.217 86 113" stroke="currentColor" stroke-width="6" stroke-linejoin="round"/>
+  <path d="M141 159.5C171.376 159.5 196 151.217 196 141V58M86 58V131" stroke="currentColor" stroke-width="6" stroke-linejoin="round"/>
+  <path d="M113 21.5C113 31.7173 88.3757 40 58 40C27.6243 40 3 31.7173 3 21.5C3 11.2827 27.6243 3 58 3C88.3757 3 113 11.2827 113 21.5ZM113 21.5V42.5" stroke="currentColor" stroke-width="6" stroke-linejoin="round"/>
+  <ellipse cx="141" cy="58.5" rx="55" ry="18.5" stroke="currentColor" stroke-width="6" stroke-linejoin="round"/>
+  <path d="M141 150.5C141 160.717 116.376 169 86 169C55.6243 169 31 160.717 31 150.5M141 150.5C141 140.283 116.376 132 86 132C55.6243 132 31 140.283 31 150.5M141 150.5V178.5M31 150.5V178.5" stroke="currentColor" stroke-width="6" stroke-linejoin="round"/>
+  <path d="M141 178C141 188.217 116.376 196.5 86 196.5C55.6243 196.5 31 188.217 31 178" stroke="currentColor" stroke-width="6" stroke-linejoin="round"/>
+  <path d="M3 49C3 59.2173 27.6243 67.5 58 67.5C68.225 67.5 77.7983 66.5615 86 64.9266" stroke="currentColor" stroke-width="6" stroke-linejoin="round"/>
+  <path d="M3 81C3 91.2173 27.6243 99.5 58 99.5C68.225 99.5 77.7983 98.5615 86 96.9266" stroke="currentColor" stroke-width="6" stroke-linejoin="round"/>
+  <path d="M86 128.927C77.7983 130.561 68.225 131.5 58 131.5C27.6243 131.5 3 123.217 3 113V21.5" stroke="currentColor" stroke-width="6" stroke-linejoin="round"/>
+</svg>

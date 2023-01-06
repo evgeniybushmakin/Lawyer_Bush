@@ -1,0 +1,7 @@
+<svg width="200" height="141" viewBox="0 0 200 141" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="52" cy="29" r="26" stroke="currentColor" stroke-width="6" stroke-linejoin="round"/>
+  <path d="M102 138C51.0059 135.819 24.9429 132.595 3.5 107C7.22822 74.0142 16.0872 61.0185 53 55C70.3987 57.5481 77.7326 60.3337 86 68" stroke="currentColor" stroke-width="6" stroke-linejoin="round"/>
+  <ellipse rx="25.5" ry="26" transform="matrix(-1 0 0 1 149.5 29)" stroke="currentColor" stroke-width="6" stroke-linejoin="round"/>
+  <path d="M100 138C150.218 135.819 175.884 132.595 197 107C193.329 74.0142 184.604 61.0185 148.254 55C131.12 57.5481 123.898 60.3337 115.756 68" stroke="currentColor" stroke-width="6" stroke-linejoin="round"/>
+  <path d="M100.5 97C110.717 97 119 88.7173 119 78.5C119 68.2827 110.717 60 100.5 60C90.2827 60 82 68.2827 82 78.5C82 88.7173 90.2827 97 100.5 97ZM100.5 97C75.6458 101.922 68.7983 110.885 67 136M100.5 97C125.711 102.32 133.742 110.526 135.5 136M168 75L167 74.5L168.5 75L170 76.5L169.5 76M177 83.5L175.5 82L180 87.5C182.715 91.8371 183.492 94.3694 184 99V105V102" stroke="currentColor" stroke-width="6" stroke-linejoin="round"/>
+</svg>
