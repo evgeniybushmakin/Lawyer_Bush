@@ -34,6 +34,11 @@ export default {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  margin-top: -4rem;
+
+  @include --tablet {
+    margin-top: -2rem;
+  }
 
   &__card {
     position: relative;

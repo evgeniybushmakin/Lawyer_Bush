@@ -8,7 +8,7 @@
     </div>
 
     <div class="app-section">
-      <QuestionForm/>
+      <QuestionForm />
     </div>
   </main>
 </template>

@@ -3,12 +3,12 @@
     <div class="app-section">
       <PageHead
         img="page-head-1.jpg"
-        title="Личный адвокат"
+        title="Семейные споры"
       />
     </div>
 
     <div class="app-section">
-      <QuestionForm/>
+      <QuestionForm />
     </div>
   </main>
 </template>

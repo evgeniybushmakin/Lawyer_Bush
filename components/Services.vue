@@ -133,6 +133,14 @@ export default {
     display: flex;
   }
 
+  &__tab-content {
+    padding-top: 4rem;
+
+    @include --tablet {
+      padding-top: 2rem;
+    }
+  }
+
   &__tab {
     padding: 0 4rem 0.8rem 4rem;
     border-bottom: 1px solid var(--text-color);
