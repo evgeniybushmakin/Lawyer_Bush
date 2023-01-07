@@ -8,6 +8,13 @@
     </div>
 
     <div class="app-section">
+      <ServicesList
+        title="Предоставляемые услуги"
+        :services="services"
+      />
+    </div>
+
+    <div class="app-section">
       <QuestionForm />
     </div>
   </main>
@@ -16,11 +23,28 @@
 <script>
 import PageHead from "~/components/PageHead";
 import QuestionForm from "~/components/QuestionForm";
+import ServicesList from "~/components/ServicesList";
 
 export default {
   components: {
     PageHead,
     QuestionForm,
+    ServicesList,
   },
+  data() {
+    return {
+      services: [
+        'Консультирование по арбитражным делам;',
+        'Досудебное урегулирование арбитражных споров;',
+        'Взыскание дебиторской задолженности;',
+        'Возмещение убытков;',
+        'Споры по договорам (подряда, перевозки, аренды, субаренды, купли-продажи, лизинга, комиссии, страхования, займа, кредитным договорам и др.);',
+        'Оспаривание правовых актов;',
+        'Корпоративные споры;',
+        'Исполнительное производство;',
+        'и иная защита.',
+      ],
+    }
+  }
 }
 </script>

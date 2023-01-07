@@ -9,11 +9,11 @@
           результата с&nbsp;юридической точки зрения.</p>
       </div>
 
-      <form class="question-form__form">
+      <form class="question-form__form" @submit.prevent="formSubmit">
         <AppField
           v-model="formData.name"
           label="Как вас зовут?"
-          :error="formErrors.indexOf('name') !== -1"
+          :error="errors.indexOf('name') !== -1"
           details="Заполните это поле"
           color="contrast"
         />
@@ -21,14 +21,14 @@
         <AppField
           v-model="formData.tel"
           label="Ваш номер телефона"
-          :error="formErrors.indexOf('tel') !== -1"
+          :error="errors.indexOf('tel') !== -1"
           details="Заполните это поле"
           color="contrast"
-          mask="+7 (000) 000-00-00"
+          mask="{+7} {(}000{)} 000{-}00{-}00"
         />
 
         <div class="question-form__submit-container">
-          <AppButton color="contrast">
+          <AppButton type="submit" color="contrast" @click="formSubmit">
             Отправить
           </AppButton>
 
@@ -61,9 +61,38 @@ export default {
         name: '',
         tel: '',
       },
-      formErrors: [],
+      errors: [],
     }
   },
+  methods: {
+    formSubmit() {
+      this.errors = []
+
+      for (const dataKey in this.formData) {
+        const value = this.formData[dataKey]
+
+        switch (dataKey) {
+          case 'name':
+            value.length === 0 && this.errors.push(dataKey)
+            break
+          case 'tel':
+            if (value.length < 16) {
+              this.errors.push(dataKey)
+            }
+            break
+        }
+      }
+
+      if (this.errors.length) return
+
+      this.resetForm()
+    },
+    resetForm() {
+      for (const dataKey in this.formData) {
+        this.formData[dataKey] = ''
+      }
+    },
+  }
 }
 </script>
 

@@ -1,12 +1,12 @@
 .app-section {
-  margin-bottom: 14rem;
+  margin-bottom: 10rem;
 
   @include --tablet {
     margin-bottom: 8rem;
   }
 
   @include --mobile {
-    margin-bottom: 6.4rem;
+    margin-bottom: 5.4rem;
   }
 
   &__title {
