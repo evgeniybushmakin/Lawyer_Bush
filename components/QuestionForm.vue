@@ -2,7 +2,7 @@
   <div class="question-form">
     <div class="container">
       <div class="question-form__content">
-        <h3 class="question-form__title">Есть вопросы?</h3>
+        <h3 class="question-form__title">Получить бесплатную консультацию</h3>
 
         <p class="question-form__text">Отправьте заявку на&nbsp;бесплатную консультацию, юрист Мария Владимировна
           свяжется с&nbsp;вами, ответит на&nbsp;все вопросы и&nbsp;поможет выработать план, для получения наилучшего

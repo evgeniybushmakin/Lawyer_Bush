@@ -12,6 +12,7 @@
         <nuxt-link to="/individual" class="header__link">Физическим лицам</nuxt-link>
         <nuxt-link to="/entity" class="header__link">Юридическим лицам</nuxt-link>
         <nuxt-link to="/contacts" class="header__link">Контакты</nuxt-link>
+        <AppButton color="contrast">Задать вопрос</AppButton>
       </div>
 
       <button class="header__burger" @click="handleOpenMenu">
@@ -21,18 +22,38 @@
 
     <div class="menu-burger" :class="{open: isMenuOpen}">
       <div class="container">
-        <nuxt-link to="/" class="menu-burger__link" v-on:click.native="handleCloseMenu">Главная</nuxt-link>
-        <nuxt-link to="/individual" class="menu-burger__link" v-on:click.native="handleCloseMenu">Физическим лицам</nuxt-link>
-        <nuxt-link to="/entity" class="menu-burger__link" v-on:click.native="handleCloseMenu">Юридическим лицам</nuxt-link>
-        <nuxt-link to="/contacts" class="menu-burger__link" v-on:click.native="handleCloseMenu">Контакты</nuxt-link>
+        <nuxt-link to="/" class="menu-burger__link" v-on:click.native="handleCloseMenu">
+          Главная <svg-icon name="button-arrow"/>
+        </nuxt-link>
+        <nuxt-link to="/individual" class="menu-burger__link" v-on:click.native="handleCloseMenu">
+          Физическим лицам <svg-icon name="button-arrow"/>
+        </nuxt-link>
+        <nuxt-link to="/entity" class="menu-burger__link" v-on:click.native="handleCloseMenu">
+          Юридическим лицам <svg-icon name="button-arrow"/>
+        </nuxt-link>
+        <nuxt-link to="/contacts" class="menu-burger__link" v-on:click.native="handleCloseMenu">
+          Контакты <svg-icon name="button-arrow"/>
+        </nuxt-link>
+
+        <AppButton color="contrast">Задать вопрос</AppButton>
+
+        <img
+          alt="image"
+          src="~/assets/images/femide.png"
+          class="menu-burger__img"
+        />
       </div>
     </div>
   </header>
 </template>
 
 <script>
+import AppButton from "~/components/ui/AppButton";
 export default {
   name: 'Header',
+  components: {
+    AppButton,
+  },
   data() {
     return {
       isMenuOpen: false,
@@ -83,6 +104,9 @@ export default {
   }
 
   &__links {
+    display: flex;
+    align-items: center;
+
     @include --tablet {
       display: none;
     }
@@ -90,15 +114,12 @@ export default {
 
   &__link {
     @include text-h5;
+    margin-right: 3.5rem;
     color: var(--text-contrast-color);
     text-decoration: underline transparent;
     text-decoration-skip-ink: none;
     text-underline-offset: 2px;
     transition: text-decoration $trTime $easeDefault;
-
-    &:not(:last-of-type) {
-      margin-right: 3.5rem;
-    }
 
     @include hover {
       text-decoration-color: var(--text-contrast-color);
@@ -180,7 +201,8 @@ export default {
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: var(--app-background);
+  color: var(--text-contrast-color);
+  background-color: var(--accent-color);
   transform: translateX(-100%);
   transition: transform, $trTime $easeDefault;
   will-change: transform;
@@ -199,13 +221,52 @@ export default {
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
+
+    @include --mobile {
+      padding-bottom: 2rem;
+    }
   }
 
   &__link {
-    @include text-h3;
+    @include text-h4;
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.2rem;
 
-    &:not(:last-of-type) {
-      margin-bottom: 1.2rem;
+    svg {
+      @include box(1.4rem);
+      margin-left: 1.4rem;
+
+      @include --mobile {
+        @include box(1.2rem);
+        margin-left: 1.2rem;
+      }
+    }
+  }
+
+  &__img {
+    display: none;
+
+    @include --tablet {
+      display: block;
+      position: absolute;
+      right: 0;
+      bottom: -5%;
+      max-height: 75%;
+      max-width: 100%;
+      object-fit: contain;
+      transform: scale(-1, 1);
+    }
+  }
+
+  .app-button {
+    position: relative;
+    z-index: 2;
+    margin-top: 1.2rem;
+
+    @include --mobile {
+      margin-top: auto;
+      width: 100%;
     }
   }
 }

@@ -53,7 +53,7 @@ export default {
   &__title {
     color: var(--text-contrast-color);
     position: relative;
-    z-index: 3;
+    z-index: 2;
   }
 
   &::before {
