@@ -51,8 +51,11 @@ export default {
 
 <style lang="scss" scoped>
 .header {
-  background-color: var(--text-color);
+  position: relative;
+  z-index: 3;
+  background-color: transparent;
   height: $desktopHeaderHeight;
+  border-bottom: 1px solid var(--border-color);
 
   @include --tablet {
     height: $mobileHeaderHeight;

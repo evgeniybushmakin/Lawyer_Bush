@@ -7,13 +7,13 @@
         <p class="app-head__description">Помощь в&nbsp;решении судебных и&nbsp;досудебных вопросов</p>
         <AppButton>Получить бесплатную консультацию</AppButton>
       </div>
-
-      <img
-        alt="title image"
-        src="~/assets/images/head.png"
-        class="app-head__img"
-      />
     </div>
+
+    <img
+      alt="title image"
+      src="~/assets/images/page-head-1.jpg"
+      class="app-head__img"
+    />
   </div>
 </template>
 
@@ -29,9 +29,9 @@ export default {
 
 <style lang="scss" scoped>
 .app-head {
+  position: relative;
   height: calc(100vh - $desktopHeaderHeight);
   background-color: var(--head-background);
-  overflow: hidden;
 
   @include --tablet {
     height: calc(100vh - $mobileHeaderHeight);
@@ -44,22 +44,32 @@ export default {
 
   &__img {
     position: absolute;
-    top: 0;
-    right: -10%;
-    height: 100%;
-    max-width: 80%;
-    object-fit: contain;
+    top: -$desktopHeaderHeight;
+    left: 0;
+    width: 100%;
+    height: calc(100% + $desktopHeaderHeight);
+    object-fit: cover;
 
     @include --tablet {
-      top: auto;
-      bottom: -10%;
-      right: -20%;
-      height: 70%;
-      max-width: none;
+      object-position: left;
+      top: -$mobileHeaderHeight;
+      height: calc(100% + $mobileHeaderHeight);
     }
+  }
 
-    @include --mobile {
-      bottom: 0;
+  &::before {
+    position: absolute;
+    z-index: 2;
+    top: -$desktopHeaderHeight;
+    left: 0;
+    width: 100%;
+    height: calc(100% + $desktopHeaderHeight);
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    content: '';
+
+    @include --tablet {
+      top: -$mobileHeaderHeight;
+      height: calc(100% + $mobileHeaderHeight);
     }
   }
 
@@ -71,9 +81,10 @@ export default {
     flex-direction: column;
     padding-top: 15vh;
     max-width: 60rem;
+    color: var(--text-contrast-color);
 
     @include --tablet {
-      padding-top: 5.6rem;
+      padding-top: 10vh;
     }
 
     @include --mobile {
@@ -94,10 +105,14 @@ export default {
   }
 
   &__name {
-    margin-bottom: 5.6rem;
+    margin-bottom: 15vh;
+
+    @include --tablet {
+      margin-bottom: 10vh;
+    }
 
     @include --mobile {
-      margin-bottom: 3.2rem;
+      margin-bottom: 4rem;
     }
   }
 
@@ -105,7 +120,6 @@ export default {
     @include text-h3;
     margin-bottom: 3.2rem;
     font-weight: 500;
-    color: var(--primary-color);
 
     @include --mobile {
       margin-bottom: 1.6rem;

@@ -101,6 +101,7 @@ export default {
   padding: 10rem 0;
   color: var(--text-contrast-color);
   background-color: var(--primary-color);
+  overflow: hidden;
 
   @include --tablet {
     padding: 8rem 0;

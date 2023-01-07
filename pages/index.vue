@@ -5,11 +5,11 @@
     </div>
 
     <div class="app-section">
-      <MyMission/>
+      <Statistic/>
     </div>
 
     <div class="app-section">
-      <Statistic/>
+      <MyMission/>
     </div>
 
     <div class="app-section">
