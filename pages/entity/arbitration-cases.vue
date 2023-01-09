@@ -3,13 +3,22 @@
     <div class="app-section">
       <PageHead
         img="page-head-1.jpg"
-        title="Арбитражные дела"
+        title="Защита по арбитражным делам"
       />
     </div>
 
     <div class="app-section">
+      <TextBlock>
+        <p>Деятельность арбитражных судов заключается в разрешении экономических споров и рассмотрении дел, в которых участвуют юридические лица и индивидуальные предприниматели.</p>
+        <p>В арбитражных инстанциях судебный процесс является достаточно формальной процедурой, так как решающую роль здесь играет предоставленная доказательная база.</p>
+        <p>Адвокат, в первую очередь, должен позаботиться о поиске документации и других доказательств, которые смогут гарантировать успешный результат.</p>
+        <p>Конечно, результат того или иного экономического спора зависит не только от документации, но и от опыта и квалификации адвоката, которые помогут построить рациональную стратегию использования определенных аргументов.</p>
+      </TextBlock>
+    </div>
+
+    <div class="app-section">
       <ServicesList
-        title="Предоставляемые услуги"
+        title=" Мария Владимировна может оказать Вам следующую юридическую помощь:"
         :services="services"
       />
     </div>
@@ -24,12 +33,14 @@
 import PageHead from "~/components/PageHead";
 import QuestionForm from "~/components/QuestionForm";
 import ServicesList from "~/components/ServicesList";
+import TextBlock from "~/components/TextBlock";
 
 export default {
   components: {
     PageHead,
     QuestionForm,
     ServicesList,
+    TextBlock,
   },
   data() {
     return {

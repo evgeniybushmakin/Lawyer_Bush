@@ -95,7 +95,15 @@ export default {
   }
 
   &__list-item {
-    margin-bottom: 1.6rem;
+    &:not(:last-child) {
+      margin-bottom: 1.2rem;
+    }
+
+    @include --tablet {
+      &:not(:last-child) {
+        margin-bottom: 0.8rem;
+      }
+    }
 
     &::before {
       display: inline-block;

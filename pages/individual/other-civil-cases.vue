@@ -3,13 +3,20 @@
     <div class="app-section">
       <PageHead
         img="page-head-1.jpg"
-        title="Иные гражданские дела"
+        title="Защита по иным гражданским делам"
       />
     </div>
 
     <div class="app-section">
+      <TextBlock>
+        <p>Широкий спектр вопросов, который рассматривают гражданские дела, требует от адвоката высокой квалификации, отличных знаний законов, хорошего практического опыта представления интересов в суде общей юрисдикции или в арбитражном суде первой инстанции.</p>
+        <p>Чем раньше адвокат включиться в процесс защиты, то тогда у адвоката будет больше шансов существенно повлиять на ход дела.</p>
+      </TextBlock>
+    </div>
+
+    <div class="app-section">
       <ServicesList
-        title="Предоставляемые услуги"
+        title=" Мария Владимировна может оказать Вам следующую юридическую помощь:"
         :services="services"
       />
     </div>
@@ -24,12 +31,14 @@
 import PageHead from "~/components/PageHead";
 import QuestionForm from "~/components/QuestionForm";
 import ServicesList from "~/components/ServicesList";
+import TextBlock from "~/components/TextBlock";
 
 export default {
   components: {
     PageHead,
     QuestionForm,
     ServicesList,
+    TextBlock,
   },
   data() {
     return {

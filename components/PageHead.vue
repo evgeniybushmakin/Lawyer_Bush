@@ -37,11 +37,11 @@ export default {
 <style lang="scss" scoped>
 .page-head {
   position: relative;
-  min-height: 40rem;
+  min-height: 25rem;
   padding-top: 5.2rem;
 
   @include --tablet {
-    min-height: 25rem;
+    min-height: 20rem;
     padding-top: 3.2rem;
   }
 

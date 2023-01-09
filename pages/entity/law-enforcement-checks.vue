@@ -3,13 +3,22 @@
     <div class="app-section">
       <PageHead
         img="page-head-1.jpg"
-        title="Правоохранительные проверки"
+        title="Защита при правоохранительных проверках"
       />
     </div>
 
     <div class="app-section">
+      <TextBlock>
+        <p>В настоящее время любой организации при осуществлении своей деятельности приходится сталкиваться с контролирующими и правоохранительными органами.</p>
+        <p>Цель проведение полицейской проверки – сбор информации о готовящемся, совершаемом или совершенном преступлении.</p>
+        <p>Для успешного прохождения данной процедуры, защиты интересов организации и ее работников, наиболее эффективным решением является сопровождение проверки опытным адвокатом.</p>
+        <p>Адвокат поможет избежать нарушения законных прав и интересов компании и конкретных лиц, оперативно отреагирует на любые нарушения, не допустит изъятия документации, оспорит незаконное удержание сотрудников в офисе, а также их личный досмотр.</p>
+      </TextBlock>
+    </div>
+
+    <div class="app-section">
       <ServicesList
-        title="Предоставляемые услуги"
+        title=" Мария Владимировна может оказать Вам следующую юридическую помощь:"
         :services="services"
       />
     </div>
@@ -24,12 +33,14 @@
 import PageHead from "~/components/PageHead";
 import QuestionForm from "~/components/QuestionForm";
 import ServicesList from "~/components/ServicesList";
+import TextBlock from "~/components/TextBlock";
 
 export default {
   components: {
     PageHead,
     QuestionForm,
     ServicesList,
+    TextBlock,
   },
   data() {
     return {

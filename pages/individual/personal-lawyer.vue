@@ -3,19 +3,39 @@
     <div class="app-section">
       <PageHead
         img="page-head-1.jpg"
-        title="Личный адвокат"
+        title="Личный адвокат для физических лиц"
       />
     </div>
 
     <div class="app-section">
+      <TextBlock>
+      </TextBlock>
+    </div>
+
+    <div class="app-section">
+      <TextBlock>
+        <p>Во многих странах использование юридической помощи «Личного адвоката» стало традицией, где адвокат
+          круглосуточно заботиться о полном юридическом благополучии своего Доверителя.</p>
+        <p>В российском обществе же бытует мнение, что к адвокату необходимо обращаться только после возникновения
+          проблемы. Однако это является абсолютным заблуждением, поскольку своевременный квалифицированный юридический
+          совет в состоянии предотвратить различные конфликтные ситуации и правовые проблемы.</p>
+        <p>Личный адвокат всегда в курсе дел своего Доверителя, тем самым это позволяет оперативно вникать в его
+          проблемы. Зачастую одной из главных задача Личного адвоката становится предотвращение необдуманных
+          действий.</p>
+        <p>Личный адвокат, обладающий профессиональными правовыми знаниями, в процессе долгосрочного сотрудничества
+          превращается в Вашего советника по правовым вопросам.</p>
+      </TextBlock>
+    </div>
+
+    <div class="app-section">
       <ServicesList
-        title="Предоставляемые услуги"
+        title=" Мария Владимировна может оказать Вам следующую юридическую помощь:"
         :services="services"
       />
     </div>
 
     <div class="app-section">
-      <QuestionForm />
+      <QuestionForm/>
     </div>
   </main>
 </template>
@@ -24,12 +44,14 @@
 import PageHead from "~/components/PageHead";
 import QuestionForm from "~/components/QuestionForm";
 import ServicesList from "~/components/ServicesList";
+import TextBlock from "~/components/TextBlock";
 
 export default {
   components: {
     PageHead,
     QuestionForm,
     ServicesList,
+    TextBlock,
   },
   data() {
     return {

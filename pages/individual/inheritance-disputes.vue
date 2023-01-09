@@ -3,13 +3,21 @@
     <div class="app-section">
       <PageHead
         img="page-head-1.jpg"
-        title="Наследственные споры"
+        title="Защита по наследственным спорам"
       />
     </div>
 
     <div class="app-section">
+      <TextBlock>
+        <p>Юридическая помощь по наследственным спорам актуальна в самое тяжелое для человека время, связанное с утрой близкого человека.</p>
+        <p>Не осведомленность о действующих нормах права вкупе с психологической травмой могут существенно затянуть и усложнить процесс разрешения наследственных вопросов.</p>
+        <p>Своевременное обращение к адвокату, поможет не только избежать и минимизировать последствия спорных ситуаций, но и защитить и восстановить нарушенное право в установленном законом порядке.</p>
+      </TextBlock>
+    </div>
+
+    <div class="app-section">
       <ServicesList
-        title="Предоставляемые услуги"
+        title=" Мария Владимировна может оказать Вам следующую юридическую помощь:"
         :services="services"
       />
     </div>
@@ -24,12 +32,14 @@
 import PageHead from "~/components/PageHead";
 import QuestionForm from "~/components/QuestionForm";
 import ServicesList from "~/components/ServicesList";
+import TextBlock from "~/components/TextBlock";
 
 export default {
   components: {
     PageHead,
     QuestionForm,
     ServicesList,
+    TextBlock,
   },
   data() {
     return {

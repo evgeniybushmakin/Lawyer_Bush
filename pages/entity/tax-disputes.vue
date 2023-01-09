@@ -3,13 +3,21 @@
     <div class="app-section">
       <PageHead
         img="page-head-1.jpg"
-        title="Налоговые споры"
+        title="Защита по налоговым спорам"
       />
     </div>
 
     <div class="app-section">
+      <TextBlock>
+        <p>Если Вашей компании предстоит проверка со стороны налоговых органов, то следует заранее побеспокоится о предотвращении ее негативных последствий.</p>
+        <p>На практике, претензии со стороны налоговых органов не всегда носят обоснованный характер и могут сопровождаться существенным нарушением прав и законных интересов как самой компании, так и ее руководства и сотрудников.</p>
+        <p>Максимально эффективно защитить свои интересы можно обратившись за помощью к адвокату, который осуществит экстренный выезд, в случае проведения выемки сотрудниками налоговых органов, представит интересы компании в налоговом органе при проведении допросов, подготовит и подаст соответствующие жалобы, а при необходимости – представит интересы в суде.</p>
+      </TextBlock>
+    </div>
+
+    <div class="app-section">
       <ServicesList
-        title="Предоставляемые услуги"
+        title=" Мария Владимировна может оказать Вам следующую юридическую помощь:"
         :services="services"
       />
     </div>
@@ -24,12 +32,14 @@
 import PageHead from "~/components/PageHead";
 import QuestionForm from "~/components/QuestionForm";
 import ServicesList from "~/components/ServicesList";
+import TextBlock from "~/components/TextBlock";
 
 export default {
   components: {
     PageHead,
     QuestionForm,
     ServicesList,
+    TextBlock,
   },
   data() {
     return {

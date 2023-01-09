@@ -3,13 +3,22 @@
     <div class="app-section">
       <PageHead
         img="page-head-1.jpg"
-        title="Трудовые споры"
+        title="Защита по трудовым спорам"
       />
     </div>
 
     <div class="app-section">
+      <TextBlock>
+        <p>В настоящее время сложно найти человека, который не был бы связан трудовыми правоотношениями с организацией. Поэтому вопросы трудового законодательства интересует большинство.</p>
+        <p>В результате разногласий между работниками и работодателями появляются трудовые споры. Учитывая особые процессуальные сроки давности, работа адвоката должна быть выполнена максимально оперативно.</p>
+        <p>В практике, часто возникают случаи, когда работник не может повлиять на ситуацию под угрозой увольнения. Однако, существует множество примеров, когда пострадавшим оказывается работодатель.</p>
+        <p>С целью минимизации возможных трудовых споров, работнику и работнику необходимо знать не только свои права, но и обязанности.</p>
+      </TextBlock>
+    </div>
+
+    <div class="app-section">
       <ServicesList
-        title="Предоставляемые услуги"
+        title=" Мария Владимировна может оказать Вам следующую юридическую помощь:"
         :services="services"
       />
     </div>
@@ -24,12 +33,14 @@
 import PageHead from "~/components/PageHead";
 import QuestionForm from "~/components/QuestionForm";
 import ServicesList from "~/components/ServicesList";
+import TextBlock from "~/components/TextBlock";
 
 export default {
   components: {
     PageHead,
     QuestionForm,
     ServicesList,
+    TextBlock,
   },
   data() {
     return {

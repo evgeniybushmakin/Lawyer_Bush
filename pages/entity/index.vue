@@ -59,8 +59,8 @@ export default {
           icon: 'coins',
         },
         {
-          to: '/entity/labor-disputes',
-          title: 'Трудовые споры',
+          to: '/entity/administrative-matters',
+          title: 'Административные дела',
           icon: 'docs',
         },
       ]

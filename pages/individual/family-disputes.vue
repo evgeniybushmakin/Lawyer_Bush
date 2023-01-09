@@ -3,13 +3,21 @@
     <div class="app-section">
       <PageHead
         img="page-head-1.jpg"
-        title="Семейные споры"
+        title="Защита по семейным спорам"
       />
     </div>
 
     <div class="app-section">
+      <TextBlock>
+        <p>Каждый семейный спор уникален. В первую очередь, необходимо попытаться урегулировать конфликт в досудебном порядке, а если найти вариант мирного решения вопроса не получится, то только потом осуществить подготовку процессуальных документов для обращения в суд.</p>
+        <p>Отмечу, что семейные споры относят к категории судебных дел высокой сложности, поскольку неразрывно связаны с тяжелыми моральными испытаниями как взрослых людей, так и их детей.</p>
+        <p>В семейных спорах, правильный выбор адвоката, на 80% определяет исход дела. Адвокат Драгомир А.Р. полностью погрузиться в Вашу ситуацию и используя свой юридический опыт приложит все усилия, предусмотренные действующим законом, для получения положительного результата.</p>
+      </TextBlock>
+    </div>
+
+    <div class="app-section">
       <ServicesList
-        title="Предоставляемые услуги"
+        title=" Мария Владимировна может оказать Вам следующую юридическую помощь:"
         :services="services"
       />
     </div>
@@ -24,12 +32,14 @@
 import PageHead from "~/components/PageHead";
 import QuestionForm from "~/components/QuestionForm";
 import ServicesList from "~/components/ServicesList";
+import TextBlock from "~/components/TextBlock";
 
 export default {
   components: {
     PageHead,
     QuestionForm,
     ServicesList,
+    TextBlock,
   },
   data() {
     return {
