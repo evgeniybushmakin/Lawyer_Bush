@@ -45,7 +45,9 @@
       </div>
     </div>
 
-    <Popup :open-popup="isPopupShown" @close="closePopup"/>
+    <Popup :open-popup="isPopupShown" @close="closePopup">
+      <FormInPopup />
+    </Popup>
   </header>
 </template>
 
@@ -53,12 +55,14 @@
 import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock';
 import AppButton from "~/components/ui/AppButton";
 import Popup from "~/components/Popup";
+import FormInPopup from "~/components/FormInPopup";
 
 export default {
   name: 'Header',
   components: {
     AppButton,
     Popup,
+    FormInPopup,
   },
   data() {
     return {

@@ -2,7 +2,7 @@
   <div class="popup">
     <div ref="popup" @click.self="close" class="popup__overlay">
       <div ref="card" class="popup__card">
-        Hello
+        <slot></slot>
       </div>
     </div>
   </div>

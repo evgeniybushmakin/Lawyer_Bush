@@ -2,7 +2,7 @@
   <div class="question-form" id="question-form">
     <div class="container">
       <div class="question-form__content">
-        <h3 class="question-form__title">Получить бесплатную консультацию</h3>
+        <h3 class="question-form__title">Получите бесплатную консультацию</h3>
 
         <p class="question-form__text">Отправьте заявку на&nbsp;бесплатную консультацию, юрист Мария Владимировна
           свяжется с&nbsp;вами, ответит на&nbsp;все вопросы и&nbsp;поможет выработать план, для получения наилучшего
@@ -86,6 +86,7 @@ export default {
       if (this.errors.length) return
 
       this.resetForm()
+      this.errors = []
     },
     resetForm() {
       for (const dataKey in this.formData) {
