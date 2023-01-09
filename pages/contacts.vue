@@ -8,6 +8,10 @@
     </div>
 
     <div class="app-section">
+      <ContactsBlock />
+    </div>
+
+    <div class="app-section">
       <QuestionForm />
     </div>
   </main>
@@ -16,11 +20,13 @@
 <script>
 import PageHead from "~/components/PageHead";
 import QuestionForm from "~/components/QuestionForm";
+import ContactsBlock from "~/components/ContactsBlock";
 
 export default {
   components: {
     PageHead,
     QuestionForm,
+    ContactsBlock,
   },
 }
 </script>

@@ -32,8 +32,8 @@
             Отправить
           </AppButton>
 
-          <p class="question-form__submit-text">Нажимая на&nbsp;кнопку &laquo;Отправить&raquo; вы&nbsp;соглашаетесь с&nbsp;политикой
-            по&nbsp;обработке персональных даных</p>
+          <p class="question-form__submit-text">Нажимая на&nbsp;кнопку &laquo;Отправить&raquo; вы&nbsp;соглашаетесь с&nbsp;
+            <nuxt-link to="/privacy-policy">политикой по&nbsp;обработке персональных даных</nuxt-link></p>
         </div>
       </form>
 
@@ -172,6 +172,17 @@ export default {
       margin-top: 1.2rem;
       margin-left: 0;
       width: auto;
+    }
+
+    a {
+      text-decoration: underline;
+      text-decoration-skip-ink: none;
+      text-underline-offset: 2px;
+      transition: opacity $trTime $easeDefault;
+
+      @include hover {
+        opacity: 0.7;
+      }
     }
   }
 

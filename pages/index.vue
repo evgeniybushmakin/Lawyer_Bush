@@ -23,6 +23,10 @@
     <div class="app-section">
       <QuestionForm />
     </div>
+
+    <div class="app-section">
+      <ContactsBlock />
+    </div>
   </main>
 </template>
 
@@ -32,6 +36,7 @@ import MyMission from "@/components/MyMission";
 import Statistic from "@/components/Statistic";
 import Services from "@/components/Services";
 import QuestionForm from "@/components/QuestionForm";
+import ContactsBlock from "~/components/ContactsBlock";
 
 export default {
   name: 'IndexPage',
@@ -40,7 +45,8 @@ export default {
     MyMission,
     Statistic,
     Services,
-    QuestionForm
+    QuestionForm,
+    ContactsBlock,
   }
 }
 </script>
