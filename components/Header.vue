@@ -115,9 +115,13 @@ export default {
   }
 
   &__logo {
-    height: 100%;
+    @include box(7rem);
     border-radius: 50%;
     overflow: hidden;
+
+    @include --tablet {
+      @include box(5rem);
+    }
 
     img {
       display: block;
@@ -247,7 +251,7 @@ export default {
     justify-content: flex-start;
 
     @include --mobile {
-      padding-bottom: 10rem;
+      padding-bottom: 12rem;
     }
   }
 
