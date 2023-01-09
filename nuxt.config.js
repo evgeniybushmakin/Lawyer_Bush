@@ -35,7 +35,8 @@ export default {
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
-    '@nuxtjs/style-resources'
+    '@nuxtjs/style-resources',
+    'nuxt-gsap-module',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -43,6 +44,13 @@ export default {
     '@nuxtjs/style-resources',
     '@nuxtjs/svg-sprite',
   ],
+
+  gsap: {
+    extraPlugins: {
+      scrollTo: true,
+      scrollTrigger: true
+    },
+  },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {

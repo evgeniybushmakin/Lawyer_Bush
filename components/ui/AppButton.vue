@@ -7,6 +7,7 @@
       primary: color === 'primary',
       contrast: color === 'contrast',
     }"
+    @click="click"
   >
     <span>
       <slot />
@@ -33,7 +34,12 @@ export default {
       type: String,
       default: '',
     },
-  }
+  },
+  methods: {
+    click() {
+      this.$emit('click')
+    }
+  },
 }
 </script>
 

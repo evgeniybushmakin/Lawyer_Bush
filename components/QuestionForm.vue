@@ -1,5 +1,5 @@
 <template>
-  <div class="question-form">
+  <div class="question-form" id="question-form">
     <div class="container">
       <div class="question-form__content">
         <h3 class="question-form__title">Получить бесплатную консультацию</h3>

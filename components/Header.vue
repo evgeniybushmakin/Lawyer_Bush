@@ -1,5 +1,5 @@
 <template>
-  <header class="header">
+  <header ref="header" class="header">
     <div class="container">
       <nuxt-link to="/" class="header__logo">
         <img
@@ -12,7 +12,7 @@
         <nuxt-link to="/individual" class="header__link">Физическим лицам</nuxt-link>
         <nuxt-link to="/entity" class="header__link">Юридическим лицам</nuxt-link>
         <nuxt-link to="/contacts" class="header__link">Контакты</nuxt-link>
-        <AppButton color="contrast">Задать вопрос</AppButton>
+        <AppButton color="contrast" @click="openPopup">Задать вопрос</AppButton>
       </div>
 
       <button class="header__burger" @click="handleOpenMenu">
@@ -22,20 +22,20 @@
 
     <div class="menu-burger" :class="{open: isMenuOpen}">
       <div class="container">
-        <nuxt-link to="/" class="menu-burger__link" v-on:click.native="handleCloseMenu">
+        <nuxt-link to="/" class="menu-burger__link" v-on:click.native="handleOpenMenu">
           Главная <svg-icon name="button-arrow"/>
         </nuxt-link>
-        <nuxt-link to="/individual" class="menu-burger__link" v-on:click.native="handleCloseMenu">
+        <nuxt-link to="/individual" class="menu-burger__link" v-on:click.native="handleOpenMenu">
           Физическим лицам <svg-icon name="button-arrow"/>
         </nuxt-link>
-        <nuxt-link to="/entity" class="menu-burger__link" v-on:click.native="handleCloseMenu">
+        <nuxt-link to="/entity" class="menu-burger__link" v-on:click.native="handleOpenMenu">
           Юридическим лицам <svg-icon name="button-arrow"/>
         </nuxt-link>
-        <nuxt-link to="/contacts" class="menu-burger__link" v-on:click.native="handleCloseMenu">
+        <nuxt-link to="/contacts" class="menu-burger__link" v-on:click.native="handleOpenMenu">
           Контакты <svg-icon name="button-arrow"/>
         </nuxt-link>
 
-        <AppButton color="contrast">Задать вопрос</AppButton>
+        <AppButton color="contrast" v-on:click="openPopup">Задать вопрос</AppButton>
 
         <img
           alt="image"
@@ -44,27 +44,43 @@
         />
       </div>
     </div>
+
+    <Popup :open-popup="isPopupShown" @close="closePopup"/>
   </header>
 </template>
 
 <script>
+import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock';
 import AppButton from "~/components/ui/AppButton";
+import Popup from "~/components/Popup";
+
 export default {
   name: 'Header',
   components: {
     AppButton,
+    Popup,
   },
   data() {
     return {
       isMenuOpen: false,
+      isPopupShown: false,
     }
   },
   methods: {
     handleOpenMenu() {
-      this.isMenuOpen = !this.isMenuOpen
+      if (!this.isMenuOpen) {
+        disableBodyScroll(this.$refs.header)
+        this.isMenuOpen = true
+      } else {
+        enableBodyScroll(this.$refs.header)
+        this.isMenuOpen = false
+      }
     },
-    handleCloseMenu() {
-      this.isMenuOpen = false
+    openPopup() {
+      this.isPopupShown = true;
+    },
+    closePopup() {
+      this.isPopupShown = false
     }
   },
 }

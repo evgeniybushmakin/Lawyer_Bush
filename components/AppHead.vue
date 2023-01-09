@@ -5,7 +5,7 @@
         <p class="app-head__sign">Профессиональный юрист</p>
         <h1 class="app-head__name">Курмаева Мария Владимировна</h1>
         <p class="app-head__description">Помощь в&nbsp;решении судебных и&nbsp;досудебных вопросов</p>
-        <AppButton>Получить бесплатную консультацию</AppButton>
+        <AppButton @click="scrollToForm">Получить бесплатную консультацию</AppButton>
       </div>
     </div>
 
@@ -19,10 +19,17 @@
 
 <script>
 import AppButton from "@/components/ui/AppButton";
+
 export default {
   name: 'AppHead',
   components: {
     AppButton,
+  },
+  methods: {
+    scrollToForm() {
+      const gsap = this.$gsap
+      gsap.to(window, {duration: 1, scrollTo:"#question-form"});
+    },
   },
 }
 </script>

@@ -1,6 +1,6 @@
 <template>
-  <div class="container">
-    <div class="not-found">
+  <div class="not-found">
+    <div class="container">
       <span
         class="not-found__error-number"
         v-if="error.statusCode"
@@ -45,7 +45,23 @@ export default {
 
 <style lang="scss" scoped>
 .not-found {
+  position: relative;
   padding-top: 10rem;
+
+  &::before {
+    position: absolute;
+    top: -$desktopHeaderHeight;
+    left: 0;
+    width: 100%;
+    height: $desktopHeaderHeight;
+    background-color: var(--accent-color);
+    content: '';
+
+    @include --tablet {
+      top: -$mobileHeaderHeight;
+      height: $mobileHeaderHeight;
+    }
+  }
 
   &__error-number {
     display: block;
