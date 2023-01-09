@@ -108,6 +108,10 @@ export default {
     justify-content: space-between;
     height: 100%;
     padding: 1rem 0;
+
+    @include --tablet {
+      justify-content: flex-start;
+    }
   }
 
   &__logo {
@@ -243,7 +247,7 @@ export default {
     justify-content: flex-start;
 
     @include --mobile {
-      padding-bottom: 2rem;
+      padding-bottom: 10rem;
     }
   }
 

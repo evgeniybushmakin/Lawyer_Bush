@@ -42,9 +42,18 @@ export default {
   display: flex;
   align-items: center;
 
+  @include --tablet {
+    flex-direction: column-reverse;
+  }
+
   &__map {
     @include box(51.4rem);
     flex-shrink: 0;
+
+    @include --tablet {
+      width: 100%;
+      height: 30rem;
+    }
 
     img {
       @include box(100%);
@@ -55,6 +64,11 @@ export default {
 
   &__text {
     margin-left: 14.2rem;
+
+    @include --tablet {
+      margin-left: 0;
+      margin-bottom: 2.4rem;
+    }
   }
 
   &__text-item {

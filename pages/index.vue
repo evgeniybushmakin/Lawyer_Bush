@@ -25,6 +25,10 @@
     </div>
 
     <div class="app-section">
+      <div class="container">
+        <h3 class="app-section__title">Контакты</h3>
+      </div>
+
       <ContactsBlock />
     </div>
   </main>
