@@ -2,7 +2,7 @@
   <main id="main">
     <div class="app-section">
       <PageHead
-        img="page-head-1.jpg"
+        img="privacy-policy.jpg"
         title="Политика в отношении обработки персональных данных"
       />
     </div>
