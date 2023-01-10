@@ -25,6 +25,10 @@
         <p class="contacts__text-item"><span>Телефон:</span> <a href="tel:+1234567890">+7 (965) 195-58-58</a></p>
 
         <p class="contacts__text-item"><span>Почта:</span> <a href="mailto:info@dragomir.pro">info@dragomir.pro</a></p>
+
+        <div class="contacts__social">
+          <a href="#"><svg-icon name="whatsapp"/></a>
+        </div>
       </div>
     </div>
   </div>
@@ -73,9 +77,10 @@ export default {
 
   &__text-item {
     @include text;
+    margin-bottom: 1.2rem;
 
-    &:not(:last-of-type) {
-      margin-bottom: 1.6rem;
+    @include --tablet {
+      margin-bottom: 0.8rem;
     }
 
     span {
@@ -91,6 +96,24 @@ export default {
 
       @include hover {
         text-decoration-color: var(--primary-color);
+      }
+    }
+  }
+
+  &__social {
+    display: flex;
+
+    a {
+      @include box(2.4rem);
+      transition: opacity $trTime $easeDefault;
+
+      @include hover {
+        opacity: 0.6;
+      }
+
+      svg {
+        @include box(100%);
+        color: var(--primary-color);
       }
     }
   }

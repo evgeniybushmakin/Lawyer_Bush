@@ -80,6 +80,7 @@ export default {
   }
 
   &__head-title {
+    @include text-lead;
     font-weight: 600;
     margin-bottom: 0.8rem;
 
@@ -100,7 +101,6 @@ export default {
   }
 
   &__social-container {
-    @include text-lead;
     display: flex;
     justify-content: flex-end;
 
@@ -129,7 +129,8 @@ export default {
   }
 
   &__foot-link {
-    @include text-h5;
+    @include text-lead;
+    font-weight: 600;
     text-decoration: underline transparent;
     text-decoration-skip-ink: none;
     text-underline-offset: 2px;

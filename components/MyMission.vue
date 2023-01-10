@@ -89,7 +89,7 @@ export default {
       left: 0;
       width: 24.2rem;
       height: 28.8rem;
-      filter: drop-shadow(0px 0px 51px rgba(0, 0, 0, 0.25)) drop-shadow(0px 0px 25px rgba(0, 0, 0, 0.25));
+      box-shadow: 2px 4px 37px 20px rgba(34, 60, 80, 0.2);
 
       @include --tablet {
         width: 40%;
