@@ -2,7 +2,7 @@
   <main id="main">
     <div class="app-section">
       <PageHead
-        img="page-head-1.jpg"
+        img="law-enforcement-checks.jpg"
         title="Защита при правоохранительных проверках"
       />
     </div>

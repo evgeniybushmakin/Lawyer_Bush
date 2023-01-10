@@ -2,7 +2,7 @@
   <main id="main">
     <div class="app-section">
       <PageHead
-        img="page-head-1.jpg"
+        img="personal-lawyer.jpg"
         title="Личный адвокат для юридических лиц"
       />
     </div>

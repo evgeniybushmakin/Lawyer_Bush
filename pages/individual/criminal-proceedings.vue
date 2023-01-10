@@ -2,7 +2,7 @@
   <main id="main">
     <div class="app-section">
       <PageHead
-        img="page-head-1.jpg"
+        img="criminal-proceedings.jpg"
         title="Защита по уголовным делам"
       />
     </div>

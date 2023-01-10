@@ -2,7 +2,7 @@
   <main id="main">
     <div class="app-section">
       <PageHead
-        img="page-head-1.jpg"
+        img="labor-disputes.jpg"
         title="Защита по трудовым спорам"
       />
     </div>
