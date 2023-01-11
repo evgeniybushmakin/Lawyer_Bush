@@ -26,6 +26,14 @@
 
     <div class="app-section">
       <div class="container">
+        <h3 class="app-section__title">Cертификаты</h3>
+      </div>
+
+      <Certificates />
+    </div>
+
+    <div class="app-section">
+      <div class="container">
         <h3 class="app-section__title">Контакты</h3>
       </div>
 
@@ -41,6 +49,7 @@ import Statistic from "@/components/Statistic";
 import Services from "@/components/Services";
 import QuestionForm from "@/components/QuestionForm";
 import ContactsBlock from "~/components/ContactsBlock";
+import Certificates from "~/components/Certificates";
 
 export default {
   name: 'IndexPage',
@@ -51,6 +60,7 @@ export default {
     Services,
     QuestionForm,
     ContactsBlock,
+    Certificates,
   }
 }
 </script>

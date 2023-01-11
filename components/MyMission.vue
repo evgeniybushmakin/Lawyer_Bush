@@ -89,7 +89,7 @@ export default {
       left: 0;
       width: 24.2rem;
       height: 28.8rem;
-      box-shadow: 2px 4px 37px 20px rgba(34, 60, 80, 0.2);
+      box-shadow: 0px -1px 60px -17px rgba(0, 0, 0, 0.63);
 
       @include --tablet {
         width: 40%;
