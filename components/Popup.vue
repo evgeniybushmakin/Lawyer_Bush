@@ -2,6 +2,10 @@
   <div class="popup">
     <div ref="popup" @click.self="close" class="popup__overlay">
       <div ref="card" class="popup__card">
+        <button @click="close" class="popup__close">
+          <svg-icon name="close"/>
+        </button>
+
         <slot></slot>
       </div>
     </div>
@@ -112,6 +116,38 @@ export default {
     justify-content: center;
   }
 
+  &__close {
+    @include box(3.2rem);
+    position: absolute;
+    top: 3.2rem;
+    right: 3.2rem;
+    z-index: 200;
+
+    @include hover {
+      svg {
+        color: var(--primary-color);
+      }
+    }
+
+    @include active {
+      svg {
+        color: var(--primary-darken-color);
+      }
+    }
+
+    @include --tablet {
+      @include box(2.4rem);
+      top: 1.6rem;
+      right: 1.6rem
+    }
+
+    svg {
+      @include box(100%);
+      color: var(--text-color);
+      transition: color $trTime $easeDefault;
+    }
+  }
+
   &__card {
     position: relative;
     width: 100%;
@@ -119,8 +155,6 @@ export default {
     max-height: 90%;
     padding: 3.2rem;
     border-radius: $borderRadiusDefault;
-    overflow-x: hidden;
-    overflow-y: auto;
     background-color: var(--element-background);
     transform: scale(0);
 
