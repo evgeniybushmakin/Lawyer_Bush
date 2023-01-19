@@ -10,6 +10,7 @@
     </div>
 
     <img
+      ref="img"
       alt="title image"
       src="~/assets/images/page-head-1.jpg"
       class="app-head__img"
@@ -24,6 +25,21 @@ export default {
   name: 'AppHead',
   components: {
     AppButton,
+  },
+  mounted() {
+    const gsap = this.$gsap
+    const { img } = this.$refs
+
+    gsap.to(img, {
+      xPercent: 50,
+      ease: "none",
+      scrollTrigger: {
+        trigger: ".pSection",
+        // start: "top bottom", // the default values
+        // end: "bottom top",
+        scrub: true
+      },
+    });
   },
   methods: {
     scrollToForm() {
@@ -52,8 +68,8 @@ export default {
   &__img {
     position: absolute;
     top: -$desktopHeaderHeight;
-    left: 0;
-    width: 100%;
+    left: -20%;
+    width: 120%;
     height: calc(100% + $desktopHeaderHeight);
     object-fit: cover;
 

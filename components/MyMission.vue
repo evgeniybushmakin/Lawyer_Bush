@@ -1,15 +1,15 @@
 <template>
   <div class="container">
-    <div class="mission">
+    <div ref="el" class="mission">
       <div class="mission__images">
-        <div class="mission__img mission__img_1">
+        <div ref="imgone" class="mission__img mission__img_1">
           <img
             alt="title image"
             src="~/assets/images/mission-1.jpg"
           />
         </div>
 
-        <div class="mission__img mission__img_2">
+        <div ref="imgtwo" class="mission__img mission__img_2">
           <img
             alt="title image"
             src="~/assets/images/mission-2.jpg"
@@ -17,7 +17,7 @@
         </div>
       </div>
 
-      <div class="mission__content">
+      <div ref="content" class="mission__content">
         <span class="mission__sign">Моя миссия</span>
         <p class="mission__text">Моя миссия заключается в&nbsp;предоставлении действительно профессиональной правовой
           помощи. Мои главные цели,&nbsp;&mdash; защитить Ваши законные права, ревностно представлять Ваши интересы, и&nbsp;выработать
@@ -30,6 +30,44 @@
 <script>
 export default {
   name: 'MyMission',
+  data() {
+    return {
+      trigger: null,
+    }
+  },
+  mounted() {
+    const gsap = this.$gsap
+    const scrollTrigger = this.$ScrollTrigger
+    const { el, content, imgone, imgtwo } = this.$refs
+
+    this.trigger = scrollTrigger.create({
+      trigger: el,
+      once: true,
+      start: 'center bottom',
+      end: 'center top',
+      onUpdate: () => {
+        gsap.to(content, {
+          x: 0,
+          stagger: 0.15,
+          duration: 1,
+        })
+        gsap.to(imgone, {
+          y: 0,
+          stagger: 0.15,
+          duration: 1,
+        })
+        gsap.to(imgtwo, {
+          x: 0,
+          stagger: 0.15,
+          duration: 1,
+        })
+      },
+    })
+  },
+
+  beforeDestroy() {
+    this.trigger?.kill()
+  },
 }
 </script>
 
@@ -73,9 +111,11 @@ export default {
       right: 0;
       width: 42.7rem;
       height: 30.1rem;
-      transform: scale(-1, 1);
+      transform: translateY(-50px);
+
 
       @include --tablet {
+        transform: translateY(-20px);
         width: 70%;
       }
 
@@ -90,6 +130,7 @@ export default {
       width: 24.2rem;
       height: 28.8rem;
       box-shadow: 0px -1px 60px -17px rgba(0, 0, 0, 0.63);
+      transform: translateX(-50px);
 
       @include --tablet {
         width: 40%;
@@ -104,6 +145,7 @@ export default {
   &__content {
     margin-left: 13.5rem;
     padding-top: 5.6rem;
+    transform: translateX(50px);
 
     @include --tablet {
       margin-left: 0;

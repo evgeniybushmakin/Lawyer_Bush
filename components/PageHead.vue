@@ -5,6 +5,7 @@
     </div>
 
     <img
+      ref="img"
       v-if="img"
       alt="title image"
       :src="getImgUrl(img)"
@@ -25,6 +26,21 @@ export default {
       type: String,
       default: '',
     },
+  },
+  mounted() {
+    const gsap = this.$gsap
+    const { img } = this.$refs
+
+    gsap.to(img, {
+      xPercent: 15,
+      ease: "none",
+      scrollTrigger: {
+        trigger: ".pSection",
+        // start: "top bottom", // the default values
+        // end: "bottom top",
+        scrub: true
+      },
+    });
   },
   methods: {
     getImgUrl(pic) {
@@ -75,8 +91,8 @@ export default {
   &__img {
     position: absolute;
     top: -$desktopHeaderHeight;
-    left: 0;
-    width: 100%;
+    left: -20%;
+    width: 120%;
     height: calc(100% + $desktopHeaderHeight);
     object-fit: cover;
 
