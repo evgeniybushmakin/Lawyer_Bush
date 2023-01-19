@@ -10,6 +10,7 @@
     "deploy": "push-dir --dir=dist --branch=gh-pages --cleanup"
   },
   "dependencies": {
+    "@nuxtjs/axios": "^5.13.6",
     "@nuxtjs/svg-sprite": "^0.5.2",
     "body-scroll-lock": "^4.0.0-beta.0",
     "core-js": "^3.25.3",
@@ -18,11 +19,10 @@
     "normalize.css": "^8.0.1",
     "nuxt": "^2.15.8",
     "vue": "^2.7.10",
-    "vue-agile": "^2.0.0",
+    "vue-flickity": "^1.2.1",
     "vue-imask": "^6.4.3",
     "vue-server-renderer": "^2.7.10",
-    "vue-template-compiler": "^2.7.10",
-    "vue-yandex-maps": "^0.11.13"
+    "vue-template-compiler": "^2.7.10"
   },
   "devDependencies": {
     "@nuxtjs/style-resources": "^1.2.1",

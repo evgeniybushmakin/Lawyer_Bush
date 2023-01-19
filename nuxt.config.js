@@ -32,8 +32,7 @@ export default {
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
-    { src: '~/plugins/ymapPlugin.js',  mode: 'client' },
-    '~/plugins/vue-agile'
+    { src: '~/plugins/VueFlickity.js', ssr: false }
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -49,6 +48,7 @@ export default {
   modules: [
     '@nuxtjs/style-resources',
     '@nuxtjs/svg-sprite',
+    '@nuxtjs/axios',
   ],
 
   gsap: {

@@ -86,6 +86,7 @@ export default {
       if (this.errors.length) return
 
       this.resetForm()
+
       this.errors = []
     },
     resetForm() {

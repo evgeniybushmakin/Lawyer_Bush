@@ -1,69 +1,38 @@
 <template>
   <div class="container">
     <div class="certificates">
-      <agile :options="myOptions">
-        <div class="certificates__slide">
+      <div class="certificates__button _left">
+        <svg-icon name="button-arrow"/>
+      </div>
+      <div class="certificates__button _right">
+        <svg-icon name="button-arrow"/>
+      </div>
+      <flickity ref="flickity" :options="flickityOptions">
+        <div class="carousel-cell">
           <img alt="certificate" src="~/assets/images/certificate1.jpg"/>
         </div>
-
-        <div class="certificates__slide">
+        <div class="carousel-cell">
           <img alt="certificate" src="~/assets/images/certificate2.jpg"/>
         </div>
-
-        <div class="certificates__slide">
+        <div class="carousel-cell">
           <img alt="certificate" src="~/assets/images/certificate1.jpg"/>
         </div>
-
-        <div class="certificates__slide">
+        <div class="carousel-cell">
           <img alt="certificate" src="~/assets/images/certificate2.jpg"/>
         </div>
-
-        <template slot="prevButton">
-          <div class="certificates__button _left">
-            <svg-icon name="button-arrow"/>
-          </div>
-        </template>
-        <template slot="nextButton">
-          <div class="certificates__button _right">
-            <svg-icon name="button-arrow"/>
-          </div>
-        </template>
-      </agile>
+      </flickity>
     </div>
   </div>
 </template>
 
 <script>
-import {VueAgile} from 'vue-agile'
 
 export default {
   name: 'Certificates',
-  components: {
-    agile: VueAgile
-  },
-  data()
-  {
+  data() {
     return {
-      myOptions: {
-        navButtons: false,
-        responsive: [
-          {
-            breakpoint: 767,
-            settings: {
-              dots: true
-            }
-          },
+      flickityOptions: {
 
-          {
-            breakpoint: 1024,
-            settings: {
-              navButtons: true,
-              dots: false,
-              infinite: false,
-              slidesToShow: 3,
-            }
-          }
-        ]
       }
     }
   }
@@ -77,8 +46,9 @@ export default {
   &__slide {
     height: 40rem;
 
-    @include --mobile {}
-    height: 30rem;
+    @include --mobile {
+      height: 30rem;
+    }
 
     img {
       @include box(100%);
