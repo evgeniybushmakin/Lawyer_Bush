@@ -10,19 +10,19 @@
     <div class="certificates">
       <div v-swiper:mySwiper="options">
         <div class="swiper-wrapper">
-          <div class="img-warpper swiper-slide">
+          <div @click="openPopup('certificate1.jpg')" class="img-warpper swiper-slide">
             <img alt="certificate" src="~/assets/images/certificate1.jpg"/>
           </div>
 
-          <div class="img-warpper swiper-slide">
+          <div @click="openPopup('certificate2.jpg')" class="img-warpper swiper-slide">
             <img alt="certificate" src="~/assets/images/certificate2.jpg"/>
           </div>
 
-          <div class="img-warpper swiper-slide">
+          <div @click="openPopup('certificate1.jpg')" class="img-warpper swiper-slide">
             <img alt="certificate" src="~/assets/images/certificate1.jpg"/>
           </div>
 
-          <div class="img-warpper swiper-slide">
+          <div @click="openPopup('certificate2.jpg')" class="img-warpper swiper-slide">
             <img alt="certificate" src="~/assets/images/certificate2.jpg"/>
           </div>
         </div>
@@ -30,15 +30,22 @@
         <div class="swiper-pagination swiper-pagination-bullets"></div>
       </div>
     </div>
+
+    <Popup :open-popup="isPopupShown" image :image-src="popupSrc" @close="closePopup"/>
   </div>
 </template>
 
 <script>
-
+import Popup from "@/components/Popup";
 export default {
   name: 'Certificates',
+  components: {
+    Popup,
+  },
   data() {
     return {
+      isPopupShown: false,
+      popupSrc: '',
       options: {
         slidesPerView: 3,
         navigation: {
@@ -64,6 +71,15 @@ export default {
         },
       }
     }
+  },
+  methods: {
+    openPopup(img) {
+      this.popupSrc = img
+      this.isPopupShown = true;
+    },
+    closePopup() {
+      this.isPopupShown = false
+    }
   }
 }
 </script>
@@ -83,6 +99,10 @@ export default {
   .swiper-slide {
     width: 100%;
     height: 40rem;
+
+    @include hover {
+      cursor: pointer;
+    }
 
     img {
       display: block;

@@ -1,7 +1,19 @@
 <template>
   <div class="popup">
     <div ref="popup" @click.self="close" class="popup__overlay">
-      <div ref="card" class="popup__card">
+      <div ref="card" v-if="image" class="popup__image-container">
+        <img
+          v-if="imageSrc"
+          alt="image"
+          :src="getImgUrl(imageSrc)"
+        />
+
+        <button @click="close" class="popup__close _image">
+          <svg-icon name="close"/>
+        </button>
+      </div>
+
+      <div v-else ref="card" class="popup__card">
         <button @click="close" class="popup__close">
           <svg-icon name="close"/>
         </button>
@@ -22,6 +34,14 @@ export default {
       type: Boolean,
       default: false,
     },
+    image: {
+      type: Boolean,
+      default: false,
+    },
+    imageSrc: {
+      type: String,
+      default: '',
+    }
   },
   data() {
     return {
@@ -96,6 +116,9 @@ export default {
         this.close()
       }
     },
+    getImgUrl(pic) {
+      return require('../assets/images/' + pic)
+    },
   },
 }
 </script>
@@ -141,10 +164,37 @@ export default {
       right: 1.6rem
     }
 
+    &._image {
+      top: -3.2rem;
+      right: -3.2rem;
+
+      @include --tablet {
+        @include box(2.4rem);
+        right: 0;
+      }
+
+      svg {
+        color: var(--text-contrast-color);
+      }
+
+      @include hover {
+        svg {
+          color: var(--text-contrast-color);
+          opacity: 0.6;
+        }
+      }
+
+      @include active {
+        svg {
+          color: var(--text-contrast-color);
+        }
+      }
+    }
+
     svg {
       @include box(100%);
       color: var(--text-color);
-      transition: color $trTime $easeDefault;
+      transition: color $trTime $easeDefault, opacity $trTime $easeDefault;
     }
   }
 
@@ -165,6 +215,22 @@ export default {
     @include --mobile {
       max-width: calc(100% - 4rem);
       padding: 1.6rem;
+    }
+  }
+
+  &__image-container {
+    position: relative;
+
+    img {
+      @include box(100%);
+      max-width: 85vw;
+      max-height: 90vh;
+      display: block;
+      object-fit: contain;
+
+      @include --mobile {
+        max-width: 95vw;
+      }
     }
   }
 }
