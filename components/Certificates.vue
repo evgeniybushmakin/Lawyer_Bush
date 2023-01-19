@@ -40,6 +40,7 @@ export default {
   data() {
     return {
       options: {
+        slidesPerView: 3,
         navigation: {
           nextEl: '._right',
           prevEl: '._left',
@@ -70,6 +71,10 @@ export default {
 <style lang="scss" scoped>
 .container {
   position: relative;
+
+  @include --tablet {
+    padding-bottom: 4rem;
+  }
 }
 
 .certificates {
@@ -87,8 +92,16 @@ export default {
     }
   }
 
-  ::v-deep.swiper-pagination-bullet-active {
-    background-color: black;
+  .swiper-pagination.swiper-pagination-bullets {
+    bottom: -3.2rem;
+  }
+
+  ::v-deep .swiper-container {
+    overflow: visible;
+  }
+
+  ::v-deep .swiper-pagination-bullet-active {
+    background-color: var(--primary-color);
   }
 
 
@@ -105,6 +118,12 @@ export default {
     border: 1px solid transparent;
     transition: background-color $trTime $easeDefault, border-color $trTime $easeDefault;
     cursor: pointer;
+
+    @include --tablet {
+      @include box(3.2rem);
+      top: auto;
+      bottom: 0;
+    }
 
     &.swiper-button-disabled {
       background-color: var(--input-disabled-color);
@@ -133,6 +152,10 @@ export default {
       @include box(2.4rem);
       color: var(--text-contrast-color);
       transition: color $trTime $easeDefault;
+
+      @include --tablet {
+        @include box(1.6rem);
+      }
     }
 
     &._left {
