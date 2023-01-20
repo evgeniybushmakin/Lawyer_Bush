@@ -39,8 +39,8 @@ export default {
       ease: "none",
       scrollTrigger: {
         trigger: ".pSection",
-        // start: "top bottom", // the default values
-        // end: "bottom top",
+        start: "top bottom",
+        end: "bottom top",
         scrub: true
       },
     });
@@ -49,8 +49,8 @@ export default {
       ease: "none",
       scrollTrigger: {
         trigger: ".pSection",
-        // start: "top bottom", // the default values
-        // end: "bottom top",
+        start: "top bottom",
+        end: "bottom top",
         scrub: true
       },
     });

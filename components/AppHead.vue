@@ -31,12 +31,12 @@ export default {
     const { img } = this.$refs
 
     gsap.to(img, {
-      xPercent: 50,
+      xPercent: 25,
       ease: "none",
       scrollTrigger: {
         trigger: ".pSection",
-        // start: "top bottom", // the default values
-        // end: "bottom top",
+        start: "top bottom", // the default values
+        end: "bottom top",
         scrub: true
       },
     });
