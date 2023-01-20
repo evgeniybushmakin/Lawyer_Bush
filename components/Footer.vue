@@ -10,7 +10,7 @@
 
         <div class="footer__head-item">
           <span class="footer__head-title">
-            <a href="tel:+1234567890">+7 (965) 195-58-58</a>
+            <a href="tel:+79219095503">+7 (921) 909-55-03</a>
           </span>
 
           <span class="footer__head-sign">Телефон</span>
@@ -18,7 +18,7 @@
 
         <div class="footer__head-item">
           <span class="footer__head-title">
-            <a href="mailto:info@dragomir.pro">info@dragomir.pro</a>
+            <a href="mailto:mariku@mail.ru">mariku@mail.ru</a>
           </span>
 
           <span class="footer__head-sign">Почта</span>
@@ -26,7 +26,8 @@
 
         <div class="footer__head-item">
           <div class="footer__social-container">
-            <a href="#"><svg-icon name="whatsapp"/></a>
+            <a target="_blank" href="https://wa.me/79219095503"><svg-icon name="whatsapp"/></a>
+            <a target="_blank" href="tg://resolve?domain=lilulilovskaya"><svg-icon name="telegram"/></a>
           </div>
         </div>
       </div>
@@ -62,6 +63,11 @@ export default {
     padding-bottom: 4rem;
     border-bottom: 1px solid var(--divider-color);
 
+    @include --tablet {
+      flex-wrap: wrap;
+      padding-bottom: 1.6rem;
+    }
+
     @include --mobile {
       flex-direction: column;
       padding-bottom: 2rem;
@@ -72,7 +78,19 @@ export default {
     display: flex;
     flex-direction: column;
 
+    @include --tablet {
+      width: auto;
+      margin-bottom: 2.4rem;
+
+      &:first-child {
+        width: 100%;
+      }
+    }
+
     @include --mobile {
+      margin-bottom: 0;
+      width: 100%;
+
       &:not(:last-of-type) {
         margin-bottom: 1.2rem;
       }
@@ -111,6 +129,10 @@ export default {
     a {
       @include box(2.4rem);
       transition: opacity $trTime $easeDefault;
+
+      &:not(:last-of-type) {
+        margin-right: 1.6rem;
+      }
 
       @include hover {
         opacity: 0.6;

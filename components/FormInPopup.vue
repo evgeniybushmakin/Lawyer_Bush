@@ -35,8 +35,7 @@
           Отправить
         </AppButton>
 
-        <p class="popup-form__submit-text">Нажимая на&nbsp;кнопку &laquo;Отправить&raquo; вы&nbsp;соглашаетесь с&nbsp;
-          <nuxt-link to="/privacy-policy">политикой по&nbsp;обработке персональных даных</nuxt-link></p>
+        <p class="popup-form__submit-text">Нажимая на&nbsp;кнопку &laquo;Отправить&raquo; вы&nbsp;соглашаетесь с&nbsp;политикой по&nbsp;обработке персональных даных</p>
       </div>
     </form>
   </div>

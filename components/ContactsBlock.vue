@@ -22,12 +22,13 @@
 
         <p class="contacts__text-item"><span>Режим работы:</span> круглосуточно</p>
 
-        <p class="contacts__text-item"><span>Телефон:</span> <a href="tel:+1234567890">+7 (965) 195-58-58</a></p>
+        <p class="contacts__text-item"><span>Телефон:</span> <a href="tel:+79219095503">+7 (921) 909-55-03</a></p>
 
-        <p class="contacts__text-item"><span>Почта:</span> <a href="mailto:info@dragomir.pro">info@dragomir.pro</a></p>
+        <p class="contacts__text-item"><span>Почта:</span> <a href="mailto:mariku@mail.ru">mariku@mail.ru</a></p>
 
         <div class="contacts__social">
-          <a href="#"><svg-icon name="whatsapp"/></a>
+          <a target="_blank" href="https://wa.me/79219095503"><svg-icon name="whatsapp"/></a>
+          <a target="_blank" href="tg://resolve?domain=lilulilovskaya"><svg-icon name="telegram"/></a>
         </div>
       </div>
     </div>
@@ -106,6 +107,10 @@ export default {
     a {
       @include box(2.4rem);
       transition: opacity $trTime $easeDefault;
+
+      &:not(:last-of-type) {
+        margin-right: 1.6rem;
+      }
 
       @include hover {
         opacity: 0.6;
