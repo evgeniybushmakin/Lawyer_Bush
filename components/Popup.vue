@@ -60,7 +60,9 @@ export default {
       const gsap = this.$gsap
       this.isPopupShown = true
 
-      disableBodyScroll(this.$refs.card)
+      // disableBodyScroll(this.$refs.card, {
+      //   reserveScrollBarGap: true,
+      // })
       document.addEventListener('keydown', this.handleEscKeydown)
 
       const { popup, card } = this.$refs
@@ -84,7 +86,7 @@ export default {
     },
     close() {
       const gsap = this.$gsap
-      clearAllBodyScrollLocks()
+      // clearAllBodyScrollLocks()
       document.removeEventListener('keydown', this.handleEscKeydown)
 
       const { popup, card } = this.$refs

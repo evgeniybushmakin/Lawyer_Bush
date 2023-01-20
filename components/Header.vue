@@ -73,10 +73,10 @@ export default {
   methods: {
     handleOpenMenu() {
       if (!this.isMenuOpen) {
-        disableBodyScroll(this.$refs.header)
+        // disableBodyScroll(this.$refs.header)
         this.isMenuOpen = true
       } else {
-        enableBodyScroll(this.$refs.header)
+        // enableBodyScroll(this.$refs.header)
         this.isMenuOpen = false
       }
     },
