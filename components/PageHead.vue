@@ -53,17 +53,17 @@ export default {
 <style lang="scss" scoped>
 .page-head {
   position: relative;
-  min-height: 25rem;
-  padding-top: 5.2rem;
+  min-height: 35rem;
+  padding-top: 9rem;
 
   @include --tablet {
-    min-height: 20rem;
-    padding-top: 3.2rem;
+    min-height: 30rem;
+    padding-top: 5rem;
   }
 
   @include --mobile {
-    min-height: 17rem;
-    padding-top: 2.4rem;
+    min-height: 25rem;
+    padding-top: 5rem;
   }
 
   &__title {
@@ -79,7 +79,7 @@ export default {
     left: 0;
     width: 100%;
     height: calc(100% + $desktopHeaderHeight);
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
     content: '';
 
     @include --tablet {

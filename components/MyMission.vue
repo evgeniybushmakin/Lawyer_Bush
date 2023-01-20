@@ -17,7 +17,7 @@
         </div>
       </div>
 
-      <div ref="content" class="mission__content">
+      <div class="mission__content">
         <span class="mission__sign">Моя миссия</span>
         <p class="mission__text">Моя миссия заключается в&nbsp;предоставлении действительно профессиональной правовой
           помощи. Мои главные цели,&nbsp;&mdash; защитить Ваши законные права, ревностно представлять Ваши интересы, и&nbsp;выработать
@@ -30,43 +30,30 @@
 <script>
 export default {
   name: 'MyMission',
-  data() {
-    return {
-      trigger: null,
-    }
-  },
   mounted() {
     const gsap = this.$gsap
-    const scrollTrigger = this.$ScrollTrigger
-    const { el, content, imgone, imgtwo } = this.$refs
+    const { imgone, imgtwo } = this.$refs
 
-    this.trigger = scrollTrigger.create({
-      trigger: el,
-      once: true,
-      start: 'center bottom',
-      end: 'center top',
-      onUpdate: () => {
-        gsap.to(content, {
-          x: 0,
-          stagger: 0.15,
-          duration: 1,
-        })
-        gsap.to(imgone, {
-          y: 0,
-          stagger: 0.15,
-          duration: 1,
-        })
-        gsap.to(imgtwo, {
-          x: 0,
-          stagger: 0.15,
-          duration: 1,
-        })
+    gsap.to(imgone, {
+      xPercent: 30,
+      ease: "none",
+      scrollTrigger: {
+        trigger: ".pSection",
+        // start: "top bottom", // the default values
+        // end: "bottom top",
+        scrub: true
       },
-    })
-  },
-
-  beforeDestroy() {
-    this.trigger?.kill()
+    });
+    gsap.to(imgtwo, {
+      yPercent: 30,
+      ease: "none",
+      scrollTrigger: {
+        trigger: ".pSection",
+        // start: "top bottom", // the default values
+        // end: "bottom top",
+        scrub: true
+      },
+    });
   },
 }
 </script>
@@ -111,15 +98,15 @@ export default {
       right: 0;
       width: 42.7rem;
       height: 30.1rem;
-      transform: translateY(-50px);
-
+      transform: scale(-1, 1);
 
       @include --tablet {
-        transform: translateY(-20px);
+        right: 8rem;
         width: 70%;
       }
 
       @include --mobile {
+        right: 4rem;
         height: 20rem;
       }
     }
@@ -130,13 +117,14 @@ export default {
       width: 24.2rem;
       height: 28.8rem;
       box-shadow: 0px -1px 60px -17px rgba(0, 0, 0, 0.63);
-      transform: translateX(-50px);
 
       @include --tablet {
+        bottom: 8rem;
         width: 40%;
       }
 
       @include --mobile {
+        bottom: 4rem;
         height: 20rem;
       }
     }
@@ -145,7 +133,6 @@ export default {
   &__content {
     margin-left: 13.5rem;
     padding-top: 5.6rem;
-    transform: translateX(50px);
 
     @include --tablet {
       margin-left: 0;
