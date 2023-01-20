@@ -60,7 +60,7 @@ export default {
       const gsap = this.$gsap
       this.isPopupShown = true
 
-      disableBodyScroll(this.$refs.popup)
+      disableBodyScroll(this.$refs.card)
       document.addEventListener('keydown', this.handleEscKeydown)
 
       const { popup, card } = this.$refs
