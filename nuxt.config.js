@@ -1,3 +1,5 @@
+const env = require("dotenv").config()
+
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   // target: 'static',
@@ -20,9 +22,7 @@ export default {
     ]
   },
 
-  env: {
-    baseUrl: 'http://api.vladikur.nomoredomains.rocks'
-  },
+  env: env.parsed,
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
     'normalize.css',
