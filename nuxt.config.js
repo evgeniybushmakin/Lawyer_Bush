@@ -21,7 +21,7 @@ export default {
   },
 
   env: {
-    baseUrl: 'http://vladikur.nomoredomains.rocks'
+    baseUrl: 'http://api.vladikur.nomoredomains.rocks'
   },
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
