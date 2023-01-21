@@ -1,9 +1,9 @@
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
-  target: 'static',
-  router: {
-    base: '/kurmaeva/'
-  },
+  // target: 'static',
+  // router: {
+  //   base: ''
+  // },
   head: {
     title: 'Юрист Курмаева М.В.',
     htmlAttrs: {
@@ -20,6 +20,9 @@ export default {
     ]
   },
 
+  env: {
+    baseUrl: 'http://vladikur.nomoredomains.rocks'
+  },
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
     'normalize.css',

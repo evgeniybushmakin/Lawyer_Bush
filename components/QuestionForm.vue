@@ -49,6 +49,7 @@
 <script>
 import AppField from "@/components/ui/AppField";
 import AppButton from "~/components/ui/AppButton";
+import axios from "@/plugins/axios";
 
 export default {
   name: 'QuestionForm',
@@ -100,6 +101,9 @@ export default {
       }
 
       if (this.errors.length) return
+
+      axios.post('/question', this.formData)
+        .then(res => {console.log(res)})
 
       this.resetForm()
 
