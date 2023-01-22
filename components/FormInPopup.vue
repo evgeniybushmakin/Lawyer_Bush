@@ -12,26 +12,26 @@
         v-model="formData.name"
         label="Как Вас зовут?"
         :error="errors.indexOf('name') !== -1"
-        details="Заполните это поле"
+        :details="details.name"
       />
 
       <AppField
         v-model="formData.email"
         label="Ваша почта"
         :error="errors.indexOf('email') !== -1"
-        details="Заполните это поле"
+        :details="details.email"
       />
 
       <AppField
         v-model="formData.question"
         label="Ваш вопрос"
         :error="errors.indexOf('question') !== -1"
-        details="Заполните это поле"
+        :details="details.question"
         textarea
       />
 
       <div class="popup-form__submit-container">
-        <AppButton type="submit" @click="formSubmit">
+        <AppButton type="submit">
           Отправить
         </AppButton>
 
@@ -44,6 +44,7 @@
 <script>
 import AppField from "~/components/ui/AppField";
 import AppButton from "~/components/ui/AppButton";
+import axios from "@/plugins/axios";
 
 export default {
   name: 'FormInPopup',
@@ -57,6 +58,11 @@ export default {
         name: '',
         email: '',
         question: '',
+      },
+      details: {
+        name: 'Заполните это поле',
+        email: 'Заполните это поле',
+        question: 'Заполните это поле',
       },
       errors: [],
     }
@@ -74,7 +80,13 @@ export default {
             value.length === 0 && this.errors.push(dataKey)
             break
           case 'email':
-            !EMAIL_REGEXP.test(value) && this.errors.push(dataKey)
+            if (value.length === 0) {
+              this.errors.push(dataKey)
+              this.details.email = 'Заполните это поле'
+            } else if (!EMAIL_REGEXP.test(value)) {
+              this.errors.push(dataKey)
+              this.details.email = 'Введите корректный email'
+            }
             break
           case 'question':
             value.length === 0 && this.errors.push(dataKey)
@@ -84,12 +96,21 @@ export default {
 
       if (this.errors.length) return
 
-      this.errors = []
-      this.resetForm()
+      axios.post('/question', this.formData)
+        .then(() => {
+          this.$toast.success('Ваш запрос отправлен. Мария Владимировна свяжется с Вами в ближайшее время.');
+          this.resetForm()
+        })
+        .catch(() => {
+          this.$toast.error('Что-то пошло не так. Попробуйте повторить запрос позже.');
+        })
     },
     resetForm() {
       for (const dataKey in this.formData) {
         this.formData[dataKey] = ''
+      }
+      for (const dataKey in this.details) {
+        this.details[dataKey] = 'Заполните это поле'
       }
     },
   }

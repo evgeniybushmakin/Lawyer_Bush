@@ -7,18 +7,20 @@ export default {
   //   base: ''
   // },
   head: {
-    title: 'Юрист Курмаева М.В.',
+    title: 'Юрист Курмаева Мария Владимировна',
     htmlAttrs: {
       lang: 'ru'
     },
     meta: [
       { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
-      { name: 'format-detection', content: 'telephone=no' }
+      { name: 'author', content: 'Владислав Курмаев' },
+      { name: 'viewport', content: 'width=device-width, initial-scale=1, maximum-scale=1' },
+      { hid: 'description', name: 'description', content: 'Интернет приемная профессионального юриста Курмевой М. В.' },
+      { name: 'format-detection', content: 'telephone=no' },
+      { name: 'keywords', content: 'юрист,адвокат,юридическая помощь,курмаева,профессиональный юрист' },
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/kurmaeva/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
   },
 
@@ -53,6 +55,7 @@ export default {
     '@nuxtjs/style-resources',
     '@nuxtjs/svg-sprite',
     '@nuxtjs/axios',
+    'vue-toastification/nuxt',
   ],
 
   gsap: {

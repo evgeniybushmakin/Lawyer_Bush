@@ -13,22 +13,22 @@
         <AppField
           v-model="formData.name"
           label="Как вас зовут?"
-          :error="errors.indexOf('name') !== -1"
-          details="Заполните это поле"
+          :error="errors.includes('name')"
+          :details="details.name"
           color="contrast"
         />
 
         <AppField
           v-model="formData.tel"
           label="Ваш номер телефона"
-          :error="errors.indexOf('tel') !== -1"
-          details="Заполните это поле"
+          :error="errors.includes('tel')"
+          :details="details.tel"
           color="contrast"
           mask="{+7} {(}000{)} 000{-}00{-}00"
         />
 
         <div class="question-form__submit-container">
-          <AppButton type="submit" color="contrast" @click="formSubmit">
+          <AppButton type="submit" color="contrast">
             Отправить
           </AppButton>
 
@@ -63,6 +63,10 @@ export default {
         name: '',
         tel: '',
       },
+      details: {
+        name: 'Заполните это поле',
+        tel: 'Заполните это поле',
+      },
       errors: [],
     }
   },
@@ -93,8 +97,12 @@ export default {
             value.length === 0 && this.errors.push(dataKey)
             break
           case 'tel':
-            if (value.length < 16) {
+            if (value.length === 0) {
               this.errors.push(dataKey)
+              this.details.tel = 'Заполните это поле'
+            } else if (value.length < 16) {
+              this.errors.push(dataKey)
+              this.details.tel = 'Введите корректный телефон'
             }
             break
         }
@@ -102,16 +110,21 @@ export default {
 
       if (this.errors.length) return
 
-      axios.post('/question', this.formData)
-        .then(res => {console.log(res)})
-
-      this.resetForm()
-
-      this.errors = []
+      axios.post('/consultation', this.formData)
+        .then(() => {
+          this.$toast.success('Ваш запрос отправлен. Мария Владимировна свяжется с Вами в ближайшее время.');
+          this.resetForm()
+        })
+        .catch(() => {
+          this.$toast.error('Что-то пошло не так. Попробуйте повторить запрос позже.');
+        })
     },
     resetForm() {
       for (const dataKey in this.formData) {
         this.formData[dataKey] = ''
+      }
+      for (const dataKey in this.details) {
+        this.details[dataKey] = 'Заполните это поле'
       }
     },
   }

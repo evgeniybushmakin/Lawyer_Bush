@@ -78,6 +78,10 @@ export default {
   }
 
   .app-button {
+    @include --tablet {
+      margin-bottom: 4.8rem;
+    }
+
     @include --mobile {
       width: 100%;
     }
