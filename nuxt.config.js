@@ -7,7 +7,7 @@ export default {
   //   base: ''
   // },
   head: {
-    title: 'Юрист Курмаева Мария Владимировна',
+    title: 'Юрист Курмаева М.В.',
     htmlAttrs: {
       lang: 'ru'
     },
@@ -15,7 +15,7 @@ export default {
       { charset: 'utf-8' },
       { name: 'author', content: 'Владислав Курмаев' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1, maximum-scale=1' },
-      { hid: 'description', name: 'description', content: 'Интернет приемная профессионального юриста Курмевой М. В.' },
+      { hid: 'description', name: 'description', content: 'Интернет приемная профессионального юриста Курмаевой Марии Владимировны' },
       { name: 'format-detection', content: 'telephone=no' },
       { name: 'keywords', content: 'юрист,адвокат,юридическая помощь,курмаева,профессиональный юрист' },
     ],

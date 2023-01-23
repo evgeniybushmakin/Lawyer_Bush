@@ -31,7 +31,7 @@
       />
 
       <div class="popup-form__submit-container">
-        <AppButton type="submit">
+        <AppButton :preloader="sending" type="submit">
           Отправить
         </AppButton>
 
@@ -64,6 +64,7 @@ export default {
         email: 'Заполните это поле',
         question: 'Заполните это поле',
       },
+      sending: false,
       errors: [],
     }
   },
@@ -96,6 +97,8 @@ export default {
 
       if (this.errors.length) return
 
+      this.sending = true
+
       axios.post('/question', this.formData)
         .then(() => {
           this.$toast.success('Ваш запрос отправлен. Мария Владимировна свяжется с Вами в ближайшее время.');
@@ -103,6 +106,9 @@ export default {
         })
         .catch(() => {
           this.$toast.error('Что-то пошло не так. Попробуйте повторить запрос позже.');
+        })
+        .finally(() => {
+          this.sending = false
         })
     },
     resetForm() {
