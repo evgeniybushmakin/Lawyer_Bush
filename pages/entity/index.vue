@@ -39,16 +39,6 @@ export default {
           icon: 'hands',
         },
         {
-          to: '/entity/economic-affairs',
-          title: 'Экономические дела',
-          icon: 'graph',
-        },
-        {
-          to: '/entity/law-enforcement-checks',
-          title: 'Правоохранительные проверки',
-          icon: 'police',
-        },
-        {
           to: '/entity/arbitration-cases',
           title: 'Арбитражные дела',
           icon: 'scales',

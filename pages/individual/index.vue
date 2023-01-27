@@ -69,11 +69,6 @@ export default {
           icon: 'docs',
         },
         {
-          to: '/individual/criminal-proceedings',
-          title: 'Уголовные дела',
-          icon: 'handcuffs',
-        },
-        {
           to: '/individual/other-civil-cases',
           title: 'Иные гражданские дела',
           icon: 'mans-on-table',

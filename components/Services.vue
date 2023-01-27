@@ -72,11 +72,6 @@ export default {
           icon: 'docs',
         },
         {
-          to: '/individual/criminal-proceedings',
-          title: 'Уголовные дела',
-          icon: 'handcuffs',
-        },
-        {
           to: '/individual/other-civil-cases',
           title: 'Иные гражданские дела',
           icon: 'mans-on-table',
@@ -87,16 +82,6 @@ export default {
           to: '/entity/personal-lawyer',
           title: 'Личный адвокат',
           icon: 'hands',
-        },
-        {
-          to: '/entity/economic-affairs',
-          title: 'Экономические дела',
-          icon: 'graph',
-        },
-        {
-          to: '/entity/law-enforcement-checks',
-          title: 'Правоохранительные проверки',
-          icon: 'police',
         },
         {
           to: '/entity/arbitration-cases',

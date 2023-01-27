@@ -32,7 +32,7 @@ export default {
   name: 'MyMission',
   mounted() {
     const gsap = this.$gsap
-    const { imgone, imgtwo } = this.$refs
+    const {imgone, imgtwo} = this.$refs
 
     gsap.to(imgone, {
       xPercent: 30,

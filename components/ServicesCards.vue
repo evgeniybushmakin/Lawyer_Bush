@@ -32,20 +32,21 @@ export default {
 <style lang="scss" scoped>
 .services-cards {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   flex-wrap: wrap;
-  margin-top: -4rem;
+  column-gap: 4rem;
+  row-gap: 4rem;
 
   @include --tablet {
-    margin-top: -2rem;
+    column-gap: 2rem;
+    row-gap: 2rem;
   }
 
   &__card {
     position: relative;
     padding: 3.2rem;
-    width: calc(100% / 3 - 2rem);
+    width: calc(100% / 3 - 2.7rem);
     min-height: 17.6rem;
-    margin-top: 4rem;
     background-color: var(--element-background);
     border-radius: $borderRadiusDefault;
     transition: background-color $trTime $easeDefault, box-shadow $trTime $easeDefault;
@@ -67,7 +68,6 @@ export default {
     @include --tablet {
       padding: 2rem;
       width: calc(100% / 2 - 1rem);
-      margin-top: 2rem;
       min-height: 12rem;
     }
 
