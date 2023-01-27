@@ -35,7 +35,7 @@ export default {
       individual: [
         {
           to: '/individual/personal-lawyer',
-          title: 'Личный адвокат',
+          title: 'Личный юрист',
           icon: 'hands',
         },
         {

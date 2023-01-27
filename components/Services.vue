@@ -38,7 +38,7 @@ export default {
       individual: [
         {
           to: '/individual/personal-lawyer',
-          title: 'Личный адвокат',
+          title: 'Личный юрист',
           icon: 'hands',
         },
         {
@@ -80,7 +80,7 @@ export default {
       entity: [
         {
           to: '/entity/personal-lawyer',
-          title: 'Личный адвокат',
+          title: 'Личный юрист',
           icon: 'hands',
         },
         {

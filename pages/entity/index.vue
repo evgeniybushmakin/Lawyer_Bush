@@ -35,7 +35,7 @@ export default {
       entity: [
         {
           to: '/entity/personal-lawyer',
-          title: 'Личный адвокат',
+          title: 'Личный юрист',
           icon: 'hands',
         },
         {

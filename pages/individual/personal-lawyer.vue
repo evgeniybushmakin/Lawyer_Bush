@@ -3,7 +3,7 @@
     <div class="app-section">
       <PageHead
         img="personal-lawyer.jpg"
-        title="Личный адвокат для физических лиц"
+        title="Личный юрист для физических лиц"
       />
     </div>
 
