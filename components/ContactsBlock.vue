@@ -15,16 +15,16 @@
       </div>
 
       <div class="contacts__text">
-        <p class="contacts__text-item"><span>Адрес офиса:</span> г. Санкт-Петербург, ул. Белы Куна, дом 5, пом. 1Н</p>
+        <address class="contacts__text-item"><span>Адрес офиса:</span> г. Санкт-Петербург, ул. Белы Куна, дом 5, пом. 1Н</address>
 
-        <p class="contacts__text-item"><span>Как добраться своим ходом:</span> Метро Международная (выход из метро
-          один), из стеклянных дверей направо, через 100 метров необходимо совершить пешеходный переход.</p>
+        <address class="contacts__text-item"><span>Как добраться своим ходом:</span> Метро Международная (выход из метро
+          один), из стеклянных дверей направо, через 100 метров необходимо совершить пешеходный переход.</address>
 
-        <p class="contacts__text-item">Вход в жилой дом со двора.</p>
+        <address class="contacts__text-item">Вход в жилой дом со двора.</address>
 
-        <p class="contacts__text-item"><span>Телефон:</span> <a href="tel:+79219095503">+7 (921) 909-55-03</a></p>
+        <address class="contacts__text-item"><span>Телефон:</span> <a href="tel:+79219095503">+7 (921) 909-55-03</a></address>
 
-        <p class="contacts__text-item"><span>Почта:</span> <a href="mailto:mariku@mail.ru">mariku@mail.ru</a></p>
+        <address class="contacts__text-item"><span>Почта:</span> <a href="mailto:mariku@mail.ru">mariku@mail.ru</a></address>
 
         <div class="contacts__social">
           <a target="_blank" href="https://wa.me/79219095503">

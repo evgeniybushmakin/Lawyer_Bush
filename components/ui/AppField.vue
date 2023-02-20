@@ -188,8 +188,9 @@ export default {
     border-radius: 5px;
     color: var(--text-lighten-color);
     transform: translateY(-50%);
-    transition: top 0.3s ease, background-color 0.3s ease, font-size 0.3s ease,
-    left 0.3s ease, color 0.3s ease;
+    transition: 0.3s ease;
+    transform-origin: left center;
+    transition-property: background-color, color, transform;
     pointer-events: none;
     will-change: transform;
 
@@ -250,11 +251,13 @@ export default {
           border-color: var(--text-lighten-color);
 
           + label {
-            @include text-btn-sm;
-
-            top: 0;
-            left: 1rem;
+            transform: translateY(-154%) scale(0.72);
             background-color: var(--element-background);
+            font-weight: 500;
+
+            @include --tablet {
+              transform: translateY(-137%) scale(0.72);
+            }
           }
         }
 
@@ -265,11 +268,13 @@ export default {
 
       &__label {
         &.is-contain {
-          @include text-btn-sm;
-
-          top: 0;
-          left: 1rem;
+          transform: translateY(-154%) scale(0.72);
           background-color: var(--element-background);
+          font-weight: 500;
+
+          @include --tablet {
+            transform: translateY(-137%) scale(0.72);
+          }
         }
       }
     }
@@ -315,14 +320,8 @@ export default {
           border-color: var(--input-contrast-hover-border);
 
           + label {
-            @include text-btn-sm;
-
-            top: 1.5rem;
-            left: 1rem;
-
-            @include --tablet {
-              top: 1.2rem;
-            }
+            transform: translateY(-100%) scale(0.72);
+            font-weight: 500;
           }
         }
 
@@ -333,14 +332,8 @@ export default {
 
       &__label {
         &.is-contain {
-          @include text-btn-sm;
-
-          top: 1.5rem;
-          left: 1rem;
-
-          @include --tablet {
-            top: 1.2rem;
-          }
+          transform: translateY(-100%) scale(0.72);
+          font-weight: 500;
         }
       }
     }

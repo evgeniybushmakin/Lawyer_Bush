@@ -8,12 +8,12 @@
         />
       </nuxt-link>
 
-      <div class="header__links">
+      <nav class="header__links">
         <nuxt-link to="/individual" class="header__link">Физическим лицам</nuxt-link>
         <nuxt-link to="/entity" class="header__link">Юридическим лицам</nuxt-link>
         <nuxt-link to="/contacts" class="header__link">Контакты</nuxt-link>
         <AppButton color="contrast" @click="openPopup">Задать вопрос</AppButton>
-      </div>
+      </nav>
 
       <button class="header__burger" @click="handleOpenMenu">
         <span class="header__burger-inner" :class="{open: isMenuOpen}"></span>

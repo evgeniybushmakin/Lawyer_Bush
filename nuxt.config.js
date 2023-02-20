@@ -2,10 +2,10 @@ const env = require("dotenv").config()
 
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
-  target: 'static',
-  router: {
-    base: '/kurmaeva/'
-  },
+  // target: 'static',
+  // router: {
+  //   base: '/kurmaeva/'
+  // },
   head: {
     title: 'Юрист Курмаева М.В.',
     htmlAttrs: {
@@ -38,7 +38,7 @@ export default {
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
-    { src: './plugins/vue-awesome-swiper.js', ssr: false }
+    { src: './plugins/vue-awesome-swiper.js', ssr: false },
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
