@@ -38,7 +38,6 @@
       </form>
 
       <svg-icon
-        ref="img"
         class="question-form__svg"
         name="scales-2"
       />
@@ -70,21 +69,6 @@ export default {
       sending: false,
       errors: [],
     }
-  },
-  mounted() {
-    const gsap = this.$gsap
-    const { img } = this.$refs
-
-    gsap.to(img, {
-      xPercent: -20,
-      ease: "none",
-      scrollTrigger: {
-        trigger: ".pSection",
-        start: "top bottom", // the default values
-        end: "bottom top",
-        scrub: true
-      },
-    });
   },
   methods: {
     formSubmit() {

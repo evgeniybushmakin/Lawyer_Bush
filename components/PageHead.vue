@@ -27,21 +27,6 @@ export default {
       default: '',
     },
   },
-  mounted() {
-    const gsap = this.$gsap
-    const { img } = this.$refs
-
-    gsap.to(img, {
-      xPercent: 15,
-      ease: "none",
-      scrollTrigger: {
-        trigger: ".pSection",
-        start: "top bottom", // the default values
-        end: "bottom top",
-        scrub: true
-      },
-    });
-  },
   methods: {
     getImgUrl(pic) {
       return require('../assets/images/' + pic)
