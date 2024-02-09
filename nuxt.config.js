@@ -2,10 +2,10 @@ const env = require("dotenv").config()
 
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
-  // target: 'static',
-  // router: {
-  //   base: '/kurmaeva/'
-  // },
+  target: 'static',
+  router: {
+    base: '/kurmaeva/'
+  },
   head: {
     title: 'Юрист Курмаева М.В.',
     htmlAttrs: {
