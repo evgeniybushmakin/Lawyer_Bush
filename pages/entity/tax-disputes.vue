@@ -23,7 +23,7 @@
 
     <div class="app-section">
       <ServicesList
-        title=" Мария Владимировна может оказать Вам следующую юридическую помощь:"
+        title=" BushLawyer может оказать Вам следующую юридическую помощь:"
         :services="services"
       />
     </div>

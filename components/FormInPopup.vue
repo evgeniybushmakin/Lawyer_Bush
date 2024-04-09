@@ -3,8 +3,8 @@
     <div class="popup-form__content">
       <h3 class="popup-form__title">Есть вопрос?</h3>
 
-      <p class="popup-form__text">Отправьте Ваш вопрос юристу Марие Владимировне.
-        Она ответит Вам в ближайшее время.</p>
+      <p class="popup-form__text">Отправьте Ваш вопрос юристам BushLawyer.
+        Они ответят Вам в ближайшее время.</p>
     </div>
 
     <form class="popup-form__form" @submit.prevent="formSubmit">
@@ -101,7 +101,7 @@ export default {
 
       axios.post('/question', this.formData)
         .then(() => {
-          this.$toast.success('Ваш запрос отправлен. Мария Владимировна свяжется с Вами в ближайшее время.');
+          this.$toast.success('Ваш запрос отправлен. Юристы свяжутся с Вами в ближайшее время.');
           this.resetForm()
         })
         .catch(() => {

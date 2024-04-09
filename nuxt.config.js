@@ -20,7 +20,7 @@ export default {
       { name: 'keywords', content: 'юрист,адвокат,юридическая помощь,курмаева,профессиональный юрист' },
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.png' }
     ]
   },
 

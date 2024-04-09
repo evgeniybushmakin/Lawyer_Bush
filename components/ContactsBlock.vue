@@ -14,26 +14,23 @@
       </div>
 
       <div class="contacts__text">
-        <address class="contacts__text-item"><span>Адрес офиса:</span> г. Санкт-Петербург, ул. Белы Куна, дом 5, пом. 1Н
+        <address class="contacts__text-item"><span>Адрес офиса:</span> г. Минск, ул. Колесникова, дом 18, пом. 1А
         </address>
 
-        <address class="contacts__text-item"><span>Как добраться своим ходом:</span> Метро Международная (выход из метро
-          один), из стеклянных дверей направо, через 100 метров необходимо совершить пешеходный переход.
+        <address class="contacts__text-item"><span>Как добраться своим ходом:</span> Метро Каменная горка (выход из метро
+          на сторону МТБанка), из стеклянных дверей напрва, через 100 метров необходимо сесть на 54 автобус.
         </address>
 
         <address class="contacts__text-item">Вход в жилой дом со двора.</address>
 
-        <address class="contacts__text-item"><span>Телефон:</span> <a href="tel:+79219095503">+7 (921) 909-55-03</a>
+        <address class="contacts__text-item"><span>Телефон:</span> <a href="tel:+375(44)562-72-86">+375(44)562-72-86</a>
         </address>
 
-        <address class="contacts__text-item"><span>Почта:</span> <a href="mailto:mariku@mail.ru">mariku@mail.ru</a>
+        <address class="contacts__text-item"><span>Почта:</span> <a href="mailto:E-bushmakin@bk.ru">E-bushmakin@bk.ru</a>
         </address>
 
         <div class="contacts__social">
-          <a target="_blank" href="https://wa.me/79219095503">
-            <svg-icon name="whatsapp"/>
-          </a>
-          <a target="_blank" href="tg://resolve?domain=lilulilovskaya">
+          <a target="_blank" href="tg://resolve?domain=BushmakinEvgeniy_Kommunarka">
             <svg-icon name="telegram"/>
           </a>
         </div>

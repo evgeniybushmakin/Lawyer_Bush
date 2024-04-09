@@ -5,31 +5,31 @@
         <h4 class="statistic__title">Вы&nbsp;стали гостем интернет приемной, а&nbsp;значит, Вам требуется помощь
           квалифицированного специалиста в&nbsp;области права.</h4>
 
-        <p class="statistic__text">Я&nbsp;оказываю содействие гражданам и&nbsp;бизнесу в&nbsp;решении различных правовых
-          споров и&nbsp;обеспечу представление Ваших интересов в&nbsp;судах общей юрисдикции, арбитраже, третейском
-          суде, приму участие в&nbsp;переговорах, окажу помощь на&nbsp;стадии досудебного урегулирования споров.</p>
-        <p class="statistic__text">Мой основной принцип это профессионализм и индивидуальный подход к каждому
+        <p class="statistic__text">Мы&nbsp;оказываем содействие гражданам и&nbsp;бизнесу в&nbsp;решении различных правовых
+          споров и&nbsp;обеспечиваем представление Ваших интересов в&nbsp;судах общей юрисдикции, арбитраже, третейском
+          суде, принимаем участие в&nbsp;переговорах, оказываем помощь на&nbsp;стадии досудебного урегулирования споров.</p>
+        <p class="statistic__text">Наши основные принципы это профессионализм и индивидуальный подход к каждому
           доверителю.</p>
       </div>
 
       <div class="statistic__items">
         <div class="statistic__item">
-          <div class="statistic__item-title">20 <span>лет</span></div>
+          <div class="statistic__item-title">5 <span>лет</span></div>
           <span class="statistic__item-sign">судебной практики</span>
         </div>
 
         <div class="statistic__item">
-          <div class="statistic__item-title">84</div>
+          <div class="statistic__item-title">24</div>
           <span class="statistic__item-sign">выигранных суда</span>
         </div>
 
         <div class="statistic__item">
-          <div class="statistic__item-title">50 <span>человек</span></div>
+          <div class="statistic__item-title">35 <span>человек</span></div>
           <span class="statistic__item-sign">довольных клиентов</span>
         </div>
 
         <div class="statistic__item">
-          <div class="statistic__item-title">15 <span>%</span></div>
+          <div class="statistic__item-title">30 <span>%</span></div>
           <span class="statistic__item-sign">доверителей приходят по&nbsp;рекомендации</span>
         </div>
       </div>

@@ -2,8 +2,8 @@
   <div class="app-head">
     <div class="container">
       <div class="app-head__content">
-        <p class="app-head__sign">Профессиональный юрист</p>
-        <h1 class="app-head__name">Курмаева Мария Владимировна</h1>
+        <p class="app-head__sign">Профессиональная юридическая компания</p>
+        <h1 class="app-head__name">BushLawyer</h1>
         <p class="app-head__description">Помощь в&nbsp;решении судебных и&nbsp;досудебных вопросов</p>
         <AppButton @click="scrollToForm">Получить бесплатную консультацию</AppButton>
       </div>

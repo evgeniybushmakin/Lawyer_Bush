@@ -3,14 +3,14 @@
     <div class="container">
       <div class="footer__head">
         <div class="footer__head-item">
-          <span class="footer__head-title">Курмаева Мария Владимировна</span>
+          <span class="footer__head-title">BushLayer</span>
 
-          <span class="footer__head-sign">Профессиональный юрист</span>
+          <span class="footer__head-sign">Профессиональная юридическая компания</span>
         </div>
 
         <div class="footer__head-item">
           <span class="footer__head-title">
-            <a href="tel:+79219095503">+7 (921) 909-55-03</a>
+            <a href="tel:"+375(44)562-72-86</a>
           </span>
 
           <span class="footer__head-sign">Телефон</span>
@@ -18,16 +18,13 @@
 
         <div class="footer__head-item">
           <span class="footer__head-title">
-            <a href="mailto:mariku@mail.ru">mariku@mail.ru</a>
-          </span>
-
+            <a href="mailto:E-bushmakin@bk.ru">E-bushmakin@bk.ru</a>E-bushmakin@bk.ru></span>   
           <span class="footer__head-sign">Почта</span>
         </div>
 
         <div class="footer__head-item">
           <div class="footer__social-container">
-            <a target="_blank" href="https://wa.me/79219095503"><svg-icon name="whatsapp"/></a>
-            <a target="_blank" href="tg://resolve?domain=lilulilovskaya"><svg-icon name="telegram"/></a>
+            <a target="_blank" href="tg://resolve?domain=BushmakinEvgeniy_Kommunarka"><svg-icon name="telegram"/></a>
           </div>
         </div>
       </div>

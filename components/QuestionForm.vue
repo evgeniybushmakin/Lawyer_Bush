@@ -4,8 +4,8 @@
       <div class="question-form__content">
         <h3 class="question-form__title">Получите бесплатную консультацию</h3>
 
-        <p class="question-form__text">Отправьте заявку на&nbsp;бесплатную консультацию, юрист Мария Владимировна
-          свяжется с&nbsp;вами, ответит на&nbsp;все вопросы и&nbsp;поможет выработать план, для получения наилучшего
+        <p class="question-form__text">Отправьте заявку на&nbsp;бесплатную консультацию, юристы BushLawyer
+          свяжутся с&nbsp;вами, и ответят на&nbsp;все вопросы и&nbsp;помогут Вам выработать план, для получения наилучшего
           результата с&nbsp;юридической точки зрения.</p>
       </div>
 
@@ -24,7 +24,7 @@
           :error="errors.includes('tel')"
           :details="details.tel"
           color="contrast"
-          mask="{+7} {(}000{)} 000{-}00{-}00"
+          mask="{+375} {(}00{)} 000{-}00{-}00"
         />
 
         <div class="question-form__submit-container">
@@ -33,7 +33,7 @@
           </AppButton>
 
           <p class="question-form__submit-text">Нажимая на&nbsp;кнопку &laquo;Отправить&raquo; вы&nbsp;соглашаетесь с&nbsp;
-            <nuxt-link to="/privacy-policy">политикой по&nbsp;обработке персональных даных</nuxt-link></p>
+            <nuxt-link to="/privacy-policy">политикой по&nbsp;обработке персональных данных</nuxt-link></p>
         </div>
       </form>
 
@@ -99,7 +99,7 @@ export default {
 
       axios.post('/consultation', this.formData)
         .then(() => {
-          this.$toast.success('Ваш запрос отправлен. Мария Владимировна свяжется с Вами в ближайшее время.');
+          this.$toast.success('Ваш запрос отправлен. Юристы свяжутся с Вами в ближайшее время.');
           this.resetForm()
         })
         .catch(() => {
