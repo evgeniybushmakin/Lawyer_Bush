@@ -1,11 +1,7 @@
 {
   "ExpandedNodes": [
-    "",
-    "\\assets",
-    "\\components",
-    "\\pages",
-    "\\static"
+    ""
   ],
-  "SelectedNode": "\\static\\favicon.ico",
+  "SelectedNode": "\\pages",
   "PreviewInSolutionExplorer": false
 }
